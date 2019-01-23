@@ -138,7 +138,7 @@ def createFunction(parent,id,type,name,speed,direction,runorder,speedmodes,path=
     Function.set("ID", str(id))
     Function.set("Type", type)
     Function.set("Name", name)
-    if boundscene:
+    if boundscene is not False:
         Function.set("BoundScene", str(boundscene))
     if path:
         Function.set("Path", path)
