@@ -14,7 +14,7 @@ def main(qlcfile, cuefile):
          qlcsf.init(f.read())
          
     QLCFUNCTIONS = qlcsf.extractFunctions()        
-    FADEDURATION = {'SLOW' : 3000, 'MEDIUM' : 1750, 'QUICK' : 500}
+    FADEDURATION = {'SLOW' : 3000, 'MEDIUM' : 1750, 'QUICK' : 500, 'NONE' : 0}
 
     CUES = collections.OrderedDict()
     COLLECTIONS = []
@@ -30,8 +30,8 @@ def main(qlcfile, cuefile):
                     cueName = row[0].strip()
                     fadeIn = row[1].strip()
 
-                    if fadeIn not in ("SLOW","MEDIUM","QUICK"):
-                        raise Exception("Fade '"+fadeIn+"' not supported. Supported fades 'SLOW,MEDIUM,QUICK'")
+                    if fadeIn not in ("SLOW","MEDIUM","QUICK","NONE"):
+                        raise Exception("Fade '"+fadeIn+"' not supported. Supported fades 'SLOW,MEDIUM,QUICK,NONE'")
 
                     if key+1 == len(csv_reader):
                         fadeOut = "SLOW"

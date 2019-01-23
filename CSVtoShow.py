@@ -15,6 +15,7 @@ def main(qlcfile, cuefile, audiopathprefix):
          qlcsf.init(f.read())
          
     QLCFUNCTIONS = qlcsf.extractFunctions() 
+    FADEDURATION = {'SLOW' : 3000, 'MEDIUM' : 1750, 'QUICK' : 500, 'NONE' : 0}
 
     TIMECODECHASES = {}
     TRACKS = collections.OrderedDict()
@@ -30,9 +31,19 @@ def main(qlcfile, cuefile, audiopathprefix):
             for row in csv_reader:
                 if line_count != 0:
                     timecode = row[0].strip()
-                    functionType = row[1].strip()  
-                    functionName = row[2].strip()
-                    duration = row[3].strip()
+                    fadeIn = row[1].strip()
+                    
+                    if fadeIn not in ("SLOW","MEDIUM","QUICK","NONE"):
+                        raise Exception("Fade '"+fadeIn+"' not supported. Supported fades 'SLOW,MEDIUM,QUICK,NONE'")
+                        
+                    fadeOut = row[2].strip()
+
+                    if fadeOut not in ("SLOW","MEDIUM","QUICK","NONE"):
+                        raise Exception("Fade '"+fadeOut+"' not supported. Supported fades 'SLOW,MEDIUM,QUICK,NONE'")
+                        
+                    functionType = row[3].strip()  
+                    functionName = row[4].strip()
+                    duration = row[5].strip()
                     
                     # We need to create new chases and functions for everything here
                     newFunctionId = qlcsf.generateFunctionId()
