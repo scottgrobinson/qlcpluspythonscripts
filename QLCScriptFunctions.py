@@ -2,11 +2,10 @@ import xml.etree.ElementTree as ElementTree
 from itertools import count, filterfalse
 from mutagen.mp3 import MP3
 import xml.dom.minidom as minidom
-import re
+import re, os
 
 QLCXML = None
 INUSEFUNCTIONIDS = None
-AUDIOPATHPREFIX = r"C:\Users\Scott Robinson\Dropbox\Players\Pinocchio" # CAN WE REMOVE THIS?
 
 def init(qlcxml):
     global QLCXML, INUSEFUNCTIONIDS
@@ -33,13 +32,14 @@ def extractFromQLC(query, allowMultipleResults = False):
                 
     return result
 
-def extractDurationFromAudioID(audioId):   
+def extractDurationFromAudioID(audioPathPrefix, audioId):   
     audioFunction = extractFromQLC(".//Function[@ID='"+str(audioId)+"']/Source")
 
     if audioFunction is not None:
         # This doesn't appear to be the same duration as QLC, but hopefully it's close enough. We'll see!
         # TODO: Error catching if we can't get the duration
-        duration = str(MP3(AUDIOPATHPREFIX+ "\\" + audioFunction.text).info.length).split(".")
+        path = os.path.join(audioPathPrefix, audioFunction.text)
+        duration = str(MP3(path).info.length).split(".")
         duration = duration[0] + duration[1][:3]
     else:
         raise Exception("Audio function missing source, That doesn't sound right?")

@@ -6,8 +6,9 @@ import QLCScriptFunctions as qlcsf
 
 @click.command()
 @click.option('--qlcfile', help='Location of the QLC .qxw file', required=True)
-@click.option('--showname', help='Name of the show to create', required=True)
-def main(qlcfile, showname):
+@click.option('--cuefile', help='Location of the cue .csv file', required=True)
+@click.option('--audiopathprefix', help='Audio path prefix (QLC path is releative to the .qxw file)', required=True)
+def main(qlcfile, cuefile, audiopathprefix):
     global QLCFUNCTIONS, CUES
 
     with open(qlcfile) as f:
@@ -19,15 +20,12 @@ def main(qlcfile, showname):
     TRACKS = collections.OrderedDict()
     FUNCTIONS = collections.OrderedDict()
 
+    showname = os.path.splitext(os.path.basename(cuefile))[0]
     AUDIOID = QLCFUNCTIONS['Audio'][showname]['id']
     
     try:
-        SCRIPTPATH = os.path.dirname(os.path.realpath(__file__))
-        CSVNAME = showname + ".csv"
-        CSVPATH = os.path.join(SCRIPTPATH, CSVNAME)
-        with open(CSVPATH) as csv_file:  
+        with open(cuefile) as csv_file:  
             csv_reader = csv.reader(csv_file, delimiter=',')
-            
             line_count = 0
             for row in csv_reader:
                 if line_count != 0:
@@ -127,7 +125,7 @@ def main(qlcfile, showname):
     XML_TimeDivision.set("BPM", "120")
   
     AudioTrack = qlcsf.createTrack(parent=XML_Function, id=0, name="Audio")
-    AudioTrackFunction = qlcsf.createTrackFunction(parent=AudioTrack, id=AUDIOID, starttime=0, duration=qlcsf.extractDurationFromAudioID(AUDIOID), color="#608053")
+    AudioTrackFunction = qlcsf.createTrackFunction(parent=AudioTrack, id=AUDIOID, starttime=0, duration=qlcsf.extractDurationFromAudioID(audiopathprefix, AUDIOID), color="#608053")
 
     TRACKCOUNT = 1
     # Make the Chaser tracks
@@ -164,8 +162,8 @@ def main(qlcfile, showname):
             SceneFunction = qlcsf.createFunction(parent=XML_Root, id=newfunction['newid'], type="Sequence", name=scenefunction + " " + str(SCENEFUNCTIONCOUNT), boundscene=newfunction['originalid'], path=showname, speed=speed, direction="Forward", runorder="SingleShot", speedmodes=speedmodes, steps=steps)   
             SCENEFUNCTIONCOUNT += 1
         
-    xmlstring = ElementTree.tostring(XML_Root, 'utf-8')
-    qlcsf.outputData(xmlstring, pretty=True, standard=True)
+    xmlstring = ElementTree.tostring(XML_Root[0], 'utf-8')
+    qlcsf.outputData(xmlstring, pretty=True, standard=False)
 
 if __name__ == "__main__":
     main()
