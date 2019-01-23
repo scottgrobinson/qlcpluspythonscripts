@@ -1,0 +1,1092 @@
+QLC XML (Pretty)
+<?xml version="1.0" ?>
+<Root>
+        <!-- START OF AUTO GENERATED XML FROM QLCPYTHONSCRIPTS (DO NOT COPY ROOT ELEMENT ABOVE) -->
+        <Function ID="241" Name="The Greatest Showman" Type="Show">
+                <TimeDivision BPM="120" Type="Time"/>
+                <Track ID="0" Name="Audio" isMute="0">
+                        <ShowFunction Color="#608053" Duration="231103" ID="54" StartTime="0"/>
+                </Track>
+                <Track ID="1" Name="Chase 1" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="2400" ID="93" StartTime="1000"/>
+                        <ShowFunction Color="#556b80" Duration="2300" ID="100" StartTime="7300"/>
+                        <ShowFunction Color="#556b80" Duration="15600" ID="104" StartTime="13600"/>
+                        <ShowFunction Color="#556b80" Duration="15600" ID="107" StartTime="29100"/>
+                        <ShowFunction Color="#556b80" Duration="5400" ID="110" StartTime="44700"/>
+                        <ShowFunction Color="#556b80" Duration="2300" ID="114" StartTime="50900"/>
+                        <ShowFunction Color="#556b80" Duration="2300" ID="118" StartTime="57100"/>
+                        <ShowFunction Color="#556b80" Duration="2400" ID="124" StartTime="63300"/>
+                        <ShowFunction Color="#556b80" Duration="3100" ID="132" StartTime="72800"/>
+                        <ShowFunction Color="#556b80" Duration="3100" ID="134" StartTime="75900"/>
+                        <ShowFunction Color="#556b80" Duration="2300" ID="138" StartTime="79000"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="143" StartTime="81400"/>
+                        <ShowFunction Color="#556b80" Duration="13200" ID="147" StartTime="82100"/>
+                        <ShowFunction Color="#556b80" Duration="2400" ID="151" StartTime="95300"/>
+                        <ShowFunction Color="#556b80" Duration="9900" ID="157" StartTime="100800"/>
+                        <ShowFunction Color="#556b80" Duration="9500" ID="164" StartTime="113400"/>
+                        <ShowFunction Color="#556b80" Duration="11400" ID="170" StartTime="126700"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="172" StartTime="138100"/>
+                        <ShowFunction Color="#556b80" Duration="3000" ID="175" StartTime="138800"/>
+                        <ShowFunction Color="#556b80" Duration="2300" ID="180" StartTime="141900"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="185" StartTime="144100"/>
+                        <ShowFunction Color="#556b80" Duration="5300" ID="189" StartTime="144900"/>
+                        <ShowFunction Color="#556b80" Duration="9800" ID="195" StartTime="151000"/>
+                        <ShowFunction Color="#556b80" Duration="9200" ID="202" StartTime="163800"/>
+                        <ShowFunction Color="#556b80" Duration="12500" ID="210" StartTime="175300"/>
+                        <ShowFunction Color="#556b80" Duration="7200" ID="214" StartTime="187800"/>
+                        <ShowFunction Color="#556b80" Duration="6100" ID="219" StartTime="195000"/>
+                        <ShowFunction Color="#556b80" Duration="9800" ID="223" StartTime="202600"/>
+                        <ShowFunction Color="#556b80" Duration="3600" ID="230" StartTime="215500"/>
+                        <ShowFunction Color="#556b80" Duration="3700" ID="235" StartTime="220800"/>
+                </Track>
+                <Track ID="2" Name="Chase 2" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="15600" ID="106" StartTime="13600"/>
+                        <ShowFunction Color="#556b80" Duration="15600" ID="108" StartTime="29100"/>
+                        <ShowFunction Color="#556b80" Duration="5400" ID="112" StartTime="44700"/>
+                        <ShowFunction Color="#556b80" Duration="2300" ID="121" StartTime="57100"/>
+                        <ShowFunction Color="#556b80" Duration="2400" ID="126" StartTime="63300"/>
+                        <ShowFunction Color="#556b80" Duration="3100" ID="135" StartTime="75900"/>
+                        <ShowFunction Color="#556b80" Duration="2300" ID="139" StartTime="79000"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="144" StartTime="81400"/>
+                        <ShowFunction Color="#556b80" Duration="13200" ID="148" StartTime="82100"/>
+                        <ShowFunction Color="#556b80" Duration="9900" ID="160" StartTime="100800"/>
+                        <ShowFunction Color="#556b80" Duration="9500" ID="167" StartTime="113400"/>
+                        <ShowFunction Color="#556b80" Duration="3000" ID="176" StartTime="138800"/>
+                        <ShowFunction Color="#556b80" Duration="2300" ID="182" StartTime="141900"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="186" StartTime="144100"/>
+                        <ShowFunction Color="#556b80" Duration="5300" ID="190" StartTime="144900"/>
+                        <ShowFunction Color="#556b80" Duration="9800" ID="198" StartTime="151000"/>
+                        <ShowFunction Color="#556b80" Duration="9200" ID="206" StartTime="163800"/>
+                        <ShowFunction Color="#556b80" Duration="6100" ID="220" StartTime="195000"/>
+                        <ShowFunction Color="#556b80" Duration="9800" ID="226" StartTime="202600"/>
+                        <ShowFunction Color="#556b80" Duration="3600" ID="233" StartTime="215500"/>
+                        <ShowFunction Color="#556b80" Duration="3700" ID="238" StartTime="220800"/>
+                </Track>
+                <Track ID="3" Name="Chase 3" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="15600" ID="109" StartTime="29100"/>
+                        <ShowFunction Color="#556b80" Duration="3100" ID="136" StartTime="75900"/>
+                        <ShowFunction Color="#556b80" Duration="13200" ID="149" StartTime="82100"/>
+                        <ShowFunction Color="#556b80" Duration="3000" ID="177" StartTime="138800"/>
+                        <ShowFunction Color="#556b80" Duration="5300" ID="191" StartTime="144900"/>
+                </Track>
+                <Track ID="4" Name="BLUE STAGE WASH" SceneID="20" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="2400" ID="96" StartTime="1000"/>
+                        <ShowFunction Color="#556b80" Duration="3900" ID="99" StartTime="3400"/>
+                        <ShowFunction Color="#556b80" Duration="2300" ID="101" StartTime="7300"/>
+                        <ShowFunction Color="#556b80" Duration="3900" ID="103" StartTime="9600"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="113" StartTime="50100"/>
+                        <ShowFunction Color="#556b80" Duration="1500" ID="154" StartTime="97800"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="161" StartTime="110700"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="168" StartTime="122900"/>
+                        <ShowFunction Color="#556b80" Duration="700" ID="193" StartTime="149400"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="199" StartTime="160800"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="207" StartTime="173000"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="227" StartTime="212400"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="239" StartTime="224500"/>
+                </Track>
+                <Track ID="5" Name="LED STATIC RED/BLUE" SceneID="21" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="5400" ID="111" StartTime="44700"/>
+                        <ShowFunction Color="#556b80" Duration="2300" ID="115" StartTime="50900"/>
+                        <ShowFunction Color="#556b80" Duration="3900" ID="116" StartTime="53200"/>
+                        <ShowFunction Color="#556b80" Duration="2300" ID="119" StartTime="57100"/>
+                        <ShowFunction Color="#556b80" Duration="3900" ID="122" StartTime="59400"/>
+                        <ShowFunction Color="#556b80" Duration="2400" ID="125" StartTime="63300"/>
+                        <ShowFunction Color="#556b80" Duration="4000" ID="128" StartTime="65700"/>
+                        <ShowFunction Color="#556b80" Duration="2400" ID="152" StartTime="95300"/>
+                        <ShowFunction Color="#556b80" Duration="9900" ID="158" StartTime="100800"/>
+                        <ShowFunction Color="#556b80" Duration="9500" ID="165" StartTime="113400"/>
+                        <ShowFunction Color="#556b80" Duration="9800" ID="196" StartTime="151000"/>
+                        <ShowFunction Color="#556b80" Duration="9200" ID="204" StartTime="163800"/>
+                        <ShowFunction Color="#556b80" Duration="12500" ID="211" StartTime="175300"/>
+                        <ShowFunction Color="#556b80" Duration="7200" ID="215" StartTime="187800"/>
+                        <ShowFunction Color="#556b80" Duration="9800" ID="224" StartTime="202600"/>
+                        <ShowFunction Color="#556b80" Duration="3600" ID="231" StartTime="215500"/>
+                        <ShowFunction Color="#556b80" Duration="3700" ID="236" StartTime="220800"/>
+                </Track>
+                <Track ID="6" Name="SPOTLIGHT" SceneID="15" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="3900" ID="117" StartTime="53200"/>
+                        <ShowFunction Color="#556b80" Duration="3900" ID="123" StartTime="59400"/>
+                        <ShowFunction Color="#556b80" Duration="4000" ID="129" StartTime="65700"/>
+                        <ShowFunction Color="#556b80" Duration="3100" ID="133" StartTime="72800"/>
+                        <ShowFunction Color="#556b80" Duration="3100" ID="137" StartTime="75900"/>
+                        <ShowFunction Color="#556b80" Duration="2300" ID="142" StartTime="79000"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="146" StartTime="81400"/>
+                        <ShowFunction Color="#556b80" Duration="13200" ID="150" StartTime="82100"/>
+                        <ShowFunction Color="#556b80" Duration="11400" ID="171" StartTime="126700"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="174" StartTime="138100"/>
+                        <ShowFunction Color="#556b80" Duration="3000" ID="179" StartTime="138800"/>
+                        <ShowFunction Color="#556b80" Duration="2300" ID="184" StartTime="141900"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="188" StartTime="144100"/>
+                        <ShowFunction Color="#556b80" Duration="5300" ID="192" StartTime="144900"/>
+                        <ShowFunction Color="#556b80" Duration="12500" ID="213" StartTime="175300"/>
+                        <ShowFunction Color="#556b80" Duration="7200" ID="218" StartTime="187800"/>
+                        <ShowFunction Color="#556b80" Duration="6100" ID="221" StartTime="195000"/>
+                </Track>
+                <Track ID="7" Name="CIRCUS LIGHT FORMATION 1" SceneID="22" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="1600" ID="130" StartTime="69700"/>
+                </Track>
+                <Track ID="8" Name="CIRCUS LIGHT FORMATION 2" SceneID="23" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="1600" ID="131" StartTime="71200"/>
+                </Track>
+                <Track ID="9" Name="SL FOCUS" SceneID="24" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="2300" ID="141" StartTime="79000"/>
+                        <ShowFunction Color="#556b80" Duration="2300" ID="183" StartTime="141900"/>
+                </Track>
+                <Track ID="10" Name="SR FOCUS" SceneID="25" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="800" ID="145" StartTime="81400"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="187" StartTime="144100"/>
+                </Track>
+                <Track ID="11" Name="CIRCUS WASH" SceneID="26" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="1600" ID="155" StartTime="99200"/>
+                        <ShowFunction Color="#556b80" Duration="1900" ID="163" StartTime="111500"/>
+                        <ShowFunction Color="#556b80" Duration="3100" ID="169" StartTime="123600"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="194" StartTime="150200"/>
+                        <ShowFunction Color="#556b80" Duration="2200" ID="201" StartTime="161600"/>
+                        <ShowFunction Color="#556b80" Duration="1500" ID="208" StartTime="173800"/>
+                        <ShowFunction Color="#556b80" Duration="1500" ID="222" StartTime="201100"/>
+                        <ShowFunction Color="#556b80" Duration="2300" ID="229" StartTime="213200"/>
+                        <ShowFunction Color="#556b80" Duration="1800" ID="234" StartTime="219000"/>
+                        <ShowFunction Color="#556b80" Duration="6000" ID="240" StartTime="225400"/>
+                </Track>
+                <Track ID="12" Name="HALF STAGE WASH" SceneID="27" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="9900" ID="159" StartTime="100800"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="162" StartTime="110700"/>
+                        <ShowFunction Color="#556b80" Duration="9500" ID="166" StartTime="113400"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="173" StartTime="138100"/>
+                        <ShowFunction Color="#556b80" Duration="9800" ID="197" StartTime="151000"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="200" StartTime="160800"/>
+                        <ShowFunction Color="#556b80" Duration="9200" ID="205" StartTime="163800"/>
+                        <ShowFunction Color="#556b80" Duration="12500" ID="212" StartTime="175300"/>
+                        <ShowFunction Color="#556b80" Duration="7200" ID="216" StartTime="187800"/>
+                        <ShowFunction Color="#556b80" Duration="9800" ID="225" StartTime="202600"/>
+                        <ShowFunction Color="#556b80" Duration="800" ID="228" StartTime="212400"/>
+                        <ShowFunction Color="#556b80" Duration="3600" ID="232" StartTime="215500"/>
+                        <ShowFunction Color="#556b80" Duration="3700" ID="237" StartTime="220800"/>
+                </Track>
+        </Function>
+        <Function ID="93" Name="TAB CHASE LOOP 1" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="2400" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">31</Step>
+        </Function>
+        <Function ID="100" Name="TAB CHASE LOOP 2" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="2300" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">31</Step>
+        </Function>
+        <Function ID="110" Name="TAB CHASE LOOP 3" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="5400" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">31</Step>
+        </Function>
+        <Function ID="118" Name="TAB CHASE LOOP 4" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="2300" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">31</Step>
+        </Function>
+        <Function ID="124" Name="TAB CHASE LOOP 5" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="2400" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">31</Step>
+        </Function>
+        <Function ID="157" Name="TAB CHASE LOOP 6" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="9900" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">31</Step>
+        </Function>
+        <Function ID="195" Name="TAB CHASE LOOP 7" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="9800" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">31</Step>
+        </Function>
+        <Function ID="223" Name="TAB CHASE LOOP 8" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="9800" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">31</Step>
+        </Function>
+        <Function ID="104" Name="TAB STAGGER CHASE 1" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="15600" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">61</Step>
+        </Function>
+        <Function ID="107" Name="TAB STAGGER CHASE 2" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="15600" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">61</Step>
+        </Function>
+        <Function ID="134" Name="TAB STAGGER CHASE 3" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="3100" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">61</Step>
+        </Function>
+        <Function ID="138" Name="TAB STAGGER CHASE 4" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="2300" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">61</Step>
+        </Function>
+        <Function ID="143" Name="TAB STAGGER CHASE 5" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="800" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">61</Step>
+        </Function>
+        <Function ID="147" Name="TAB STAGGER CHASE 6" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="13200" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">61</Step>
+        </Function>
+        <Function ID="164" Name="TAB STAGGER CHASE 7" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="9500" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">61</Step>
+        </Function>
+        <Function ID="175" Name="TAB STAGGER CHASE 8" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="3000" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">61</Step>
+        </Function>
+        <Function ID="180" Name="TAB STAGGER CHASE 9" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="2300" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">61</Step>
+        </Function>
+        <Function ID="185" Name="TAB STAGGER CHASE 10" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="800" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">61</Step>
+        </Function>
+        <Function ID="189" Name="TAB STAGGER CHASE 11" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="5300" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">61</Step>
+        </Function>
+        <Function ID="202" Name="TAB STAGGER CHASE 12" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="9200" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">61</Step>
+        </Function>
+        <Function ID="210" Name="TAB STAGGER CHASE 13" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="12500" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">61</Step>
+        </Function>
+        <Function ID="214" Name="TAB STAGGER CHASE 14" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="7200" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">61</Step>
+        </Function>
+        <Function ID="230" Name="TAB STAGGER CHASE 15" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="3600" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">61</Step>
+        </Function>
+        <Function ID="235" Name="TAB STAGGER CHASE 16" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="3700" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">61</Step>
+        </Function>
+        <Function ID="106" Name="LED RED/BLUE PULSE 1" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="15600" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">64</Step>
+        </Function>
+        <Function ID="108" Name="LED RED/BLUE PULSE 2" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="15600" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">64</Step>
+        </Function>
+        <Function ID="135" Name="LED RED/BLUE PULSE 3" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="3100" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">64</Step>
+        </Function>
+        <Function ID="139" Name="LED RED/BLUE PULSE 4" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="2300" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">64</Step>
+        </Function>
+        <Function ID="144" Name="LED RED/BLUE PULSE 5" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="800" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">64</Step>
+        </Function>
+        <Function ID="148" Name="LED RED/BLUE PULSE 6" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="13200" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">64</Step>
+        </Function>
+        <Function ID="176" Name="LED RED/BLUE PULSE 7" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="3000" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">64</Step>
+        </Function>
+        <Function ID="182" Name="LED RED/BLUE PULSE 8" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="2300" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">64</Step>
+        </Function>
+        <Function ID="186" Name="LED RED/BLUE PULSE 9" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="800" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">64</Step>
+        </Function>
+        <Function ID="190" Name="LED RED/BLUE PULSE 10" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="5300" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">64</Step>
+        </Function>
+        <Function ID="109" Name="STAGE WASH PULSE 1" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="15600" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">68</Step>
+        </Function>
+        <Function ID="112" Name="STAGE WASH PULSE 2" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="5400" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">68</Step>
+        </Function>
+        <Function ID="121" Name="STAGE WASH PULSE 3" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="2300" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">68</Step>
+        </Function>
+        <Function ID="126" Name="STAGE WASH PULSE 4" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="2400" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">68</Step>
+        </Function>
+        <Function ID="136" Name="STAGE WASH PULSE 5" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="3100" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">68</Step>
+        </Function>
+        <Function ID="149" Name="STAGE WASH PULSE 6" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="13200" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">68</Step>
+        </Function>
+        <Function ID="177" Name="STAGE WASH PULSE 7" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="3000" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">68</Step>
+        </Function>
+        <Function ID="191" Name="STAGE WASH PULSE 8" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="5300" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">68</Step>
+        </Function>
+        <Function ID="114" Name="BACK-FRONT CANON 1" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="2300" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">72</Step>
+        </Function>
+        <Function ID="132" Name="PULSING CHASE 1" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="3100" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">74</Step>
+        </Function>
+        <Function ID="151" Name="FRONT-BACK CANON CHASE 1" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="2400" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">76</Step>
+        </Function>
+        <Function ID="160" Name="WHITE PULSE CHASE 1" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="9900" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">80</Step>
+        </Function>
+        <Function ID="167" Name="WHITE PULSE CHASE 2" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="9500" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">80</Step>
+        </Function>
+        <Function ID="198" Name="WHITE PULSE CHASE 3" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="9800" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">80</Step>
+        </Function>
+        <Function ID="206" Name="WHITE PULSE CHASE 4" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="9200" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">80</Step>
+        </Function>
+        <Function ID="226" Name="WHITE PULSE CHASE 5" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="9800" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">80</Step>
+        </Function>
+        <Function ID="233" Name="WHITE PULSE CHASE 6" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="3600" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">80</Step>
+        </Function>
+        <Function ID="238" Name="WHITE PULSE CHASE 7" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="3700" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">80</Step>
+        </Function>
+        <Function ID="170" Name="RED WASH PULSE CHASE 1" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="11400" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">83</Step>
+        </Function>
+        <Function ID="172" Name="RED WASH PULSE CHASE 2" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="800" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">83</Step>
+        </Function>
+        <Function ID="219" Name="QUICK WHITE PULSE 1" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="6100" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">86</Step>
+        </Function>
+        <Function ID="220" Name="QUICK LED RED/BLUE PULSE 1" Path="The Greatest Showman" Type="Chaser">
+                <Speed Duration="6100" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">89</Step>
+        </Function>
+        <Function BoundScene="20" ID="96" Name="BLUE STAGE WASH 1" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="2400" Number="0" Values="0">20</Step>
+        </Function>
+        <Function BoundScene="20" ID="99" Name="BLUE STAGE WASH 2" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="3900" Number="0" Values="0">20</Step>
+        </Function>
+        <Function BoundScene="20" ID="101" Name="BLUE STAGE WASH 3" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="2300" Number="0" Values="0">20</Step>
+        </Function>
+        <Function BoundScene="20" ID="103" Name="BLUE STAGE WASH 4" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="3900" Number="0" Values="0">20</Step>
+        </Function>
+        <Function BoundScene="20" ID="113" Name="BLUE STAGE WASH 5" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="800" Number="0" Values="0">20</Step>
+        </Function>
+        <Function BoundScene="20" ID="154" Name="BLUE STAGE WASH 6" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1500" Number="0" Values="0">20</Step>
+        </Function>
+        <Function BoundScene="20" ID="161" Name="BLUE STAGE WASH 7" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="800" Number="0" Values="0">20</Step>
+        </Function>
+        <Function BoundScene="20" ID="168" Name="BLUE STAGE WASH 8" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="800" Number="0" Values="0">20</Step>
+        </Function>
+        <Function BoundScene="20" ID="193" Name="BLUE STAGE WASH 9" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="700" Number="0" Values="0">20</Step>
+        </Function>
+        <Function BoundScene="20" ID="199" Name="BLUE STAGE WASH 10" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="800" Number="0" Values="0">20</Step>
+        </Function>
+        <Function BoundScene="20" ID="207" Name="BLUE STAGE WASH 11" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="800" Number="0" Values="0">20</Step>
+        </Function>
+        <Function BoundScene="20" ID="227" Name="BLUE STAGE WASH 12" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="800" Number="0" Values="0">20</Step>
+        </Function>
+        <Function BoundScene="20" ID="239" Name="BLUE STAGE WASH 13" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="800" Number="0" Values="0">20</Step>
+        </Function>
+        <Function BoundScene="21" ID="111" Name="LED STATIC RED/BLUE 1" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="5400" Number="0" Values="0">21</Step>
+        </Function>
+        <Function BoundScene="21" ID="115" Name="LED STATIC RED/BLUE 2" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="2300" Number="0" Values="0">21</Step>
+        </Function>
+        <Function BoundScene="21" ID="116" Name="LED STATIC RED/BLUE 3" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="3900" Number="0" Values="0">21</Step>
+        </Function>
+        <Function BoundScene="21" ID="119" Name="LED STATIC RED/BLUE 4" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="2300" Number="0" Values="0">21</Step>
+        </Function>
+        <Function BoundScene="21" ID="122" Name="LED STATIC RED/BLUE 5" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="3900" Number="0" Values="0">21</Step>
+        </Function>
+        <Function BoundScene="21" ID="125" Name="LED STATIC RED/BLUE 6" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="2400" Number="0" Values="0">21</Step>
+        </Function>
+        <Function BoundScene="21" ID="128" Name="LED STATIC RED/BLUE 7" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="4000" Number="0" Values="0">21</Step>
+        </Function>
+        <Function BoundScene="21" ID="152" Name="LED STATIC RED/BLUE 8" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="2400" Number="0" Values="0">21</Step>
+        </Function>
+        <Function BoundScene="21" ID="158" Name="LED STATIC RED/BLUE 9" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="9900" Number="0" Values="0">21</Step>
+        </Function>
+        <Function BoundScene="21" ID="165" Name="LED STATIC RED/BLUE 10" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="9500" Number="0" Values="0">21</Step>
+        </Function>
+        <Function BoundScene="21" ID="196" Name="LED STATIC RED/BLUE 11" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="9800" Number="0" Values="0">21</Step>
+        </Function>
+        <Function BoundScene="21" ID="204" Name="LED STATIC RED/BLUE 12" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="9200" Number="0" Values="0">21</Step>
+        </Function>
+        <Function BoundScene="21" ID="211" Name="LED STATIC RED/BLUE 13" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="12500" Number="0" Values="0">21</Step>
+        </Function>
+        <Function BoundScene="21" ID="215" Name="LED STATIC RED/BLUE 14" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="7200" Number="0" Values="0">21</Step>
+        </Function>
+        <Function BoundScene="21" ID="224" Name="LED STATIC RED/BLUE 15" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="9800" Number="0" Values="0">21</Step>
+        </Function>
+        <Function BoundScene="21" ID="231" Name="LED STATIC RED/BLUE 16" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="3600" Number="0" Values="0">21</Step>
+        </Function>
+        <Function BoundScene="21" ID="236" Name="LED STATIC RED/BLUE 17" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="3700" Number="0" Values="0">21</Step>
+        </Function>
+        <Function BoundScene="15" ID="117" Name="SPOTLIGHT 1" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="3900" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="15" ID="123" Name="SPOTLIGHT 2" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="3900" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="15" ID="129" Name="SPOTLIGHT 3" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="4000" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="15" ID="133" Name="SPOTLIGHT 4" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="3100" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="15" ID="137" Name="SPOTLIGHT 5" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="3100" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="15" ID="142" Name="SPOTLIGHT 6" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="2300" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="15" ID="146" Name="SPOTLIGHT 7" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="800" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="15" ID="150" Name="SPOTLIGHT 8" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="13200" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="15" ID="171" Name="SPOTLIGHT 9" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="11400" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="15" ID="174" Name="SPOTLIGHT 10" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="800" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="15" ID="179" Name="SPOTLIGHT 11" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="3000" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="15" ID="184" Name="SPOTLIGHT 12" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="2300" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="15" ID="188" Name="SPOTLIGHT 13" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="800" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="15" ID="192" Name="SPOTLIGHT 14" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="5300" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="15" ID="213" Name="SPOTLIGHT 15" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="12500" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="15" ID="218" Name="SPOTLIGHT 16" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="7200" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="15" ID="221" Name="SPOTLIGHT 17" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="6100" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="22" ID="130" Name="CIRCUS LIGHT FORMATION 1 1" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1600" Number="0" Values="0">22</Step>
+        </Function>
+        <Function BoundScene="23" ID="131" Name="CIRCUS LIGHT FORMATION 2 1" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1600" Number="0" Values="0">23</Step>
+        </Function>
+        <Function BoundScene="24" ID="141" Name="SL FOCUS 1" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="2300" Number="0" Values="0">24</Step>
+        </Function>
+        <Function BoundScene="24" ID="183" Name="SL FOCUS 2" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="2300" Number="0" Values="0">24</Step>
+        </Function>
+        <Function BoundScene="25" ID="145" Name="SR FOCUS 1" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="800" Number="0" Values="0">25</Step>
+        </Function>
+        <Function BoundScene="25" ID="187" Name="SR FOCUS 2" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="800" Number="0" Values="0">25</Step>
+        </Function>
+        <Function BoundScene="26" ID="155" Name="CIRCUS WASH 1" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1600" Number="0" Values="0">26</Step>
+        </Function>
+        <Function BoundScene="26" ID="163" Name="CIRCUS WASH 2" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1900" Number="0" Values="0">26</Step>
+        </Function>
+        <Function BoundScene="26" ID="169" Name="CIRCUS WASH 3" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="3100" Number="0" Values="0">26</Step>
+        </Function>
+        <Function BoundScene="26" ID="194" Name="CIRCUS WASH 4" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="800" Number="0" Values="0">26</Step>
+        </Function>
+        <Function BoundScene="26" ID="201" Name="CIRCUS WASH 5" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="2200" Number="0" Values="0">26</Step>
+        </Function>
+        <Function BoundScene="26" ID="208" Name="CIRCUS WASH 6" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1500" Number="0" Values="0">26</Step>
+        </Function>
+        <Function BoundScene="26" ID="222" Name="CIRCUS WASH 7" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1500" Number="0" Values="0">26</Step>
+        </Function>
+        <Function BoundScene="26" ID="229" Name="CIRCUS WASH 8" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="2300" Number="0" Values="0">26</Step>
+        </Function>
+        <Function BoundScene="26" ID="234" Name="CIRCUS WASH 9" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1800" Number="0" Values="0">26</Step>
+        </Function>
+        <Function BoundScene="26" ID="240" Name="CIRCUS WASH 10" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="6000" Number="0" Values="0">26</Step>
+        </Function>
+        <Function BoundScene="27" ID="159" Name="HALF STAGE WASH 1" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="9900" Number="0" Values="0">27</Step>
+        </Function>
+        <Function BoundScene="27" ID="162" Name="HALF STAGE WASH 2" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="800" Number="0" Values="0">27</Step>
+        </Function>
+        <Function BoundScene="27" ID="166" Name="HALF STAGE WASH 3" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="9500" Number="0" Values="0">27</Step>
+        </Function>
+        <Function BoundScene="27" ID="173" Name="HALF STAGE WASH 4" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="800" Number="0" Values="0">27</Step>
+        </Function>
+        <Function BoundScene="27" ID="197" Name="HALF STAGE WASH 5" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="9800" Number="0" Values="0">27</Step>
+        </Function>
+        <Function BoundScene="27" ID="200" Name="HALF STAGE WASH 6" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="800" Number="0" Values="0">27</Step>
+        </Function>
+        <Function BoundScene="27" ID="205" Name="HALF STAGE WASH 7" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="9200" Number="0" Values="0">27</Step>
+        </Function>
+        <Function BoundScene="27" ID="212" Name="HALF STAGE WASH 8" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="12500" Number="0" Values="0">27</Step>
+        </Function>
+        <Function BoundScene="27" ID="216" Name="HALF STAGE WASH 9" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="7200" Number="0" Values="0">27</Step>
+        </Function>
+        <Function BoundScene="27" ID="225" Name="HALF STAGE WASH 10" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="9800" Number="0" Values="0">27</Step>
+        </Function>
+        <Function BoundScene="27" ID="228" Name="HALF STAGE WASH 11" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="800" Number="0" Values="0">27</Step>
+        </Function>
+        <Function BoundScene="27" ID="232" Name="HALF STAGE WASH 12" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="3600" Number="0" Values="0">27</Step>
+        </Function>
+        <Function BoundScene="27" ID="237" Name="HALF STAGE WASH 13" Path="The Greatest Showman" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="3700" Number="0" Values="0">27</Step>
+        </Function>
+        <!-- END OF AUTO GENERATED XML FROM QLCPYTHONSCRIPTS (DO NOT COPY ROOT ELEMENT BELOW) -->
+</Root>

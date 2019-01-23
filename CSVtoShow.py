@@ -114,7 +114,8 @@ def main(qlcfile, cuefile, audiopathprefix):
         print("ERROR: Unable to open CSV file - Expecting CSV in '%s'" % CSVPATH)
         
     XML_Root = ElementTree.Element("Root")
-     
+    XML_Root.insert(1, ElementTree.Comment(' START OF AUTO GENERATED XML FROM QLCPYTHONSCRIPTS (DO NOT COPY ROOT ELEMENT ABOVE) '))
+    
     XML_Function = ElementTree.SubElement(XML_Root, "Function")
     XML_Function.set("ID",str(qlcsf.generateFunctionId()))
     XML_Function.set("Type", "Show")
@@ -161,8 +162,10 @@ def main(qlcfile, cuefile, audiopathprefix):
             steps = [{"number" : 0, "fadein" : 0, "hold" : newfunction['duration'], "fadeout" : 0, "values" : 0, "functionid" : newfunction['originalid']}]
             SceneFunction = qlcsf.createFunction(parent=XML_Root, id=newfunction['newid'], type="Sequence", name=scenefunction + " " + str(SCENEFUNCTIONCOUNT), boundscene=newfunction['originalid'], path=showname, speed=speed, direction="Forward", runorder="SingleShot", speedmodes=speedmodes, steps=steps)   
             SCENEFUNCTIONCOUNT += 1
+
+    XML_Root.insert(9999999, ElementTree.Comment(' END OF AUTO GENERATED XML FROM QLCPYTHONSCRIPTS (DO NOT COPY ROOT ELEMENT BELOW) '))
         
-    xmlstring = ElementTree.tostring(XML_Root[0], 'utf-8')
+    xmlstring = ElementTree.tostring(XML_Root, 'utf-8')
     qlcsf.outputData(xmlstring, pretty=True, standard=False)
 
 if __name__ == "__main__":

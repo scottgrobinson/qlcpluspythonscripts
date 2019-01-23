@@ -1,0 +1,624 @@
+QLC XML (Pretty)
+<?xml version="1.0" ?>
+<Root>
+        <!-- START OF AUTO GENERATED XML FROM QLCPYTHONSCRIPTS (DO NOT COPY ROOT ELEMENT ABOVE) -->
+        <Function ID="179" Name="Whale Montage (Part 1)" Type="Show">
+                <TimeDivision BPM="120" Type="Time"/>
+                <Track ID="0" Name="Audio" isMute="0">
+                        <ShowFunction Color="#608053" Duration="188837" ID="73" StartTime="0"/>
+                </Track>
+                <Track ID="1" Name="Chase 1" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="7500" ID="96" StartTime="0"/>
+                        <ShowFunction Color="#556b80" Duration="6800" ID="108" StartTime="14300"/>
+                        <ShowFunction Color="#556b80" Duration="36200" ID="113" StartTime="31700"/>
+                        <ShowFunction Color="#556b80" Duration="14200" ID="170" StartTime="152200"/>
+                        <ShowFunction Color="#556b80" Duration="14000" ID="172" StartTime="168200"/>
+                </Track>
+                <Track ID="2" Name="WHALE STAGE WASH" SceneID="28" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="7500" ID="93" StartTime="0"/>
+                        <ShowFunction Color="#556b80" Duration="1700" ID="99" StartTime="7500"/>
+                        <ShowFunction Color="#556b80" Duration="1700" ID="101" StartTime="9200"/>
+                        <ShowFunction Color="#556b80" Duration="3400" ID="104" StartTime="11000"/>
+                        <ShowFunction Color="#556b80" Duration="6800" ID="107" StartTime="14300"/>
+                        <ShowFunction Color="#556b80" Duration="5500" ID="110" StartTime="26200"/>
+                        <ShowFunction Color="#556b80" Duration="36200" ID="111" StartTime="31700"/>
+                        <ShowFunction Color="#556b80" Duration="300" ID="116" StartTime="111900"/>
+                        <ShowFunction Color="#556b80" Duration="300" ID="118" StartTime="112200"/>
+                        <ShowFunction Color="#556b80" Duration="400" ID="122" StartTime="113300"/>
+                        <ShowFunction Color="#556b80" Duration="400" ID="124" StartTime="113700"/>
+                        <ShowFunction Color="#556b80" Duration="400" ID="128" StartTime="114800"/>
+                        <ShowFunction Color="#556b80" Duration="400" ID="130" StartTime="115100"/>
+                        <ShowFunction Color="#556b80" Duration="400" ID="133" StartTime="116200"/>
+                        <ShowFunction Color="#556b80" Duration="400" ID="135" StartTime="116600"/>
+                        <ShowFunction Color="#556b80" Duration="1600" ID="138" StartTime="117700"/>
+                        <ShowFunction Color="#556b80" Duration="1300" ID="141" StartTime="119200"/>
+                        <ShowFunction Color="#556b80" Duration="400" ID="144" StartTime="122000"/>
+                        <ShowFunction Color="#556b80" Duration="400" ID="146" StartTime="122400"/>
+                        <ShowFunction Color="#556b80" Duration="1600" ID="149" StartTime="123400"/>
+                        <ShowFunction Color="#556b80" Duration="1400" ID="151" StartTime="125000"/>
+                        <ShowFunction Color="#556b80" Duration="400" ID="155" StartTime="127900"/>
+                        <ShowFunction Color="#556b80" Duration="400" ID="158" StartTime="128300"/>
+                        <ShowFunction Color="#556b80" Duration="1400" ID="161" StartTime="129300"/>
+                        <ShowFunction Color="#556b80" Duration="1600" ID="163" StartTime="130700"/>
+                </Track>
+                <Track ID="3" Name="PINK STAGE WASH" SceneID="29" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="1700" ID="100" StartTime="9200"/>
+                        <ShowFunction Color="#556b80" Duration="700" ID="174" StartTime="182200"/>
+                </Track>
+                <Track ID="4" Name="GREEN STAGE WASH" SceneID="30" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="1700" ID="103" StartTime="9200"/>
+                        <ShowFunction Color="#556b80" Duration="44000" ID="115" StartTime="67900"/>
+                        <ShowFunction Color="#556b80" Duration="14000" ID="173" StartTime="168200"/>
+                        <ShowFunction Color="#556b80" Duration="700" ID="175" StartTime="182900"/>
+                </Track>
+                <Track ID="5" Name="BLUE STAGE WASH" SceneID="20" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="3400" ID="106" StartTime="11000"/>
+                        <ShowFunction Color="#556b80" Duration="1900" ID="176" StartTime="183600"/>
+                </Track>
+                <Track ID="6" Name="CIRCUS WASH" SceneID="26" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="5100" ID="109" StartTime="21100"/>
+                </Track>
+                <Track ID="7" Name="SPOTLIGHT" SceneID="15" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="36200" ID="112" StartTime="31700"/>
+                        <ShowFunction Color="#556b80" Duration="44000" ID="114" StartTime="67900"/>
+                        <ShowFunction Color="#556b80" Duration="8700" ID="166" StartTime="133400"/>
+                        <ShowFunction Color="#556b80" Duration="1600" ID="168" StartTime="148900"/>
+                </Track>
+                <Track ID="8" Name="LED STATIC RED" SceneID="94" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="300" ID="117" StartTime="111900"/>
+                        <ShowFunction Color="#556b80" Duration="400" ID="123" StartTime="113300"/>
+                        <ShowFunction Color="#556b80" Duration="400" ID="129" StartTime="114800"/>
+                        <ShowFunction Color="#556b80" Duration="400" ID="134" StartTime="116200"/>
+                        <ShowFunction Color="#556b80" Duration="1600" ID="139" StartTime="117700"/>
+                        <ShowFunction Color="#556b80" Duration="400" ID="145" StartTime="122000"/>
+                        <ShowFunction Color="#556b80" Duration="1600" ID="150" StartTime="123400"/>
+                        <ShowFunction Color="#556b80" Duration="400" ID="157" StartTime="127900"/>
+                        <ShowFunction Color="#556b80" Duration="400" ID="159" StartTime="128300"/>
+                        <ShowFunction Color="#556b80" Duration="1400" ID="162" StartTime="129300"/>
+                </Track>
+                <Track ID="9" Name="LED STATIC BLUE" SceneID="95" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="300" ID="119" StartTime="112200"/>
+                        <ShowFunction Color="#556b80" Duration="400" ID="125" StartTime="113700"/>
+                        <ShowFunction Color="#556b80" Duration="400" ID="131" StartTime="115100"/>
+                        <ShowFunction Color="#556b80" Duration="400" ID="136" StartTime="116600"/>
+                        <ShowFunction Color="#556b80" Duration="1300" ID="142" StartTime="119200"/>
+                        <ShowFunction Color="#556b80" Duration="400" ID="147" StartTime="122400"/>
+                        <ShowFunction Color="#556b80" Duration="1400" ID="152" StartTime="125000"/>
+                        <ShowFunction Color="#556b80" Duration="1600" ID="164" StartTime="130700"/>
+                </Track>
+                <Track ID="10" Name="FULL STAGE WASH" isMute="0">
+                        <ShowFunction Color="#556b80" Duration="700" ID="121" StartTime="112600"/>
+                        <ShowFunction Color="#556b80" Duration="700" ID="126" StartTime="114000"/>
+                        <ShowFunction Color="#556b80" Duration="700" ID="132" StartTime="115500"/>
+                        <ShowFunction Color="#556b80" Duration="700" ID="137" StartTime="117000"/>
+                        <ShowFunction Color="#556b80" Duration="1500" ID="143" StartTime="120500"/>
+                        <ShowFunction Color="#556b80" Duration="600" ID="148" StartTime="122800"/>
+                        <ShowFunction Color="#556b80" Duration="1500" ID="154" StartTime="126400"/>
+                        <ShowFunction Color="#556b80" Duration="700" ID="160" StartTime="128600"/>
+                        <ShowFunction Color="#556b80" Duration="1100" ID="165" StartTime="132300"/>
+                        <ShowFunction Color="#556b80" Duration="6900" ID="167" StartTime="142000"/>
+                        <ShowFunction Color="#556b80" Duration="1600" ID="169" StartTime="150600"/>
+                        <ShowFunction Color="#556b80" Duration="1800" ID="171" StartTime="166300"/>
+                        <ShowFunction Color="#556b80" Duration="3200" ID="177" StartTime="185500"/>
+                </Track>
+        </Function>
+        <Function ID="96" Name="QUICK WHITE PULSE 1" Path="Whale Montage (Part 1)" Type="Chaser">
+                <Speed Duration="7500" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">86</Step>
+        </Function>
+        <Function ID="108" Name="WHITE PULSE CHASE 1" Path="Whale Montage (Part 1)" Type="Chaser">
+                <Speed Duration="6800" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">80</Step>
+        </Function>
+        <Function ID="113" Name="WHITE PULSE CHASE 2" Path="Whale Montage (Part 1)" Type="Chaser">
+                <Speed Duration="36200" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">80</Step>
+        </Function>
+        <Function ID="170" Name="PARTY CHASE 1" Path="Whale Montage (Part 1)" Type="Chaser">
+                <Speed Duration="14200" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">36</Step>
+        </Function>
+        <Function ID="172" Name="TAB STAGGER CHASE 1" Path="Whale Montage (Part 1)" Type="Chaser">
+                <Speed Duration="14000" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>Loop</RunOrder>
+                <SpeedModes Duration="Common" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="0" Number="0">61</Step>
+        </Function>
+        <Function BoundScene="28" ID="93" Name="WHALE STAGE WASH 1" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="7500" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="99" Name="WHALE STAGE WASH 2" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1700" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="101" Name="WHALE STAGE WASH 3" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1700" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="104" Name="WHALE STAGE WASH 4" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="3400" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="107" Name="WHALE STAGE WASH 5" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="6800" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="110" Name="WHALE STAGE WASH 6" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="5500" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="111" Name="WHALE STAGE WASH 7" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="36200" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="116" Name="WHALE STAGE WASH 8" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="300" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="118" Name="WHALE STAGE WASH 9" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="300" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="122" Name="WHALE STAGE WASH 10" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="400" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="124" Name="WHALE STAGE WASH 11" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="400" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="128" Name="WHALE STAGE WASH 12" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="400" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="130" Name="WHALE STAGE WASH 13" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="400" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="133" Name="WHALE STAGE WASH 14" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="400" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="135" Name="WHALE STAGE WASH 15" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="400" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="138" Name="WHALE STAGE WASH 16" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1600" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="141" Name="WHALE STAGE WASH 17" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1300" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="144" Name="WHALE STAGE WASH 18" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="400" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="146" Name="WHALE STAGE WASH 19" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="400" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="149" Name="WHALE STAGE WASH 20" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1600" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="151" Name="WHALE STAGE WASH 21" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1400" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="155" Name="WHALE STAGE WASH 22" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="400" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="158" Name="WHALE STAGE WASH 23" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="400" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="161" Name="WHALE STAGE WASH 24" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1400" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="28" ID="163" Name="WHALE STAGE WASH 25" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1600" Number="0" Values="0">28</Step>
+        </Function>
+        <Function BoundScene="29" ID="100" Name="PINK STAGE WASH 1" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1700" Number="0" Values="0">29</Step>
+        </Function>
+        <Function BoundScene="29" ID="174" Name="PINK STAGE WASH 2" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="700" Number="0" Values="0">29</Step>
+        </Function>
+        <Function BoundScene="30" ID="103" Name="GREEN STAGE WASH 1" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1700" Number="0" Values="0">30</Step>
+        </Function>
+        <Function BoundScene="30" ID="115" Name="GREEN STAGE WASH 2" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="44000" Number="0" Values="0">30</Step>
+        </Function>
+        <Function BoundScene="30" ID="173" Name="GREEN STAGE WASH 3" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="14000" Number="0" Values="0">30</Step>
+        </Function>
+        <Function BoundScene="30" ID="175" Name="GREEN STAGE WASH 4" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="700" Number="0" Values="0">30</Step>
+        </Function>
+        <Function BoundScene="20" ID="106" Name="BLUE STAGE WASH 1" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="3400" Number="0" Values="0">20</Step>
+        </Function>
+        <Function BoundScene="20" ID="176" Name="BLUE STAGE WASH 2" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1900" Number="0" Values="0">20</Step>
+        </Function>
+        <Function BoundScene="26" ID="109" Name="CIRCUS WASH 1" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="5100" Number="0" Values="0">26</Step>
+        </Function>
+        <Function BoundScene="15" ID="112" Name="SPOTLIGHT 1" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="36200" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="15" ID="114" Name="SPOTLIGHT 2" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="44000" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="15" ID="166" Name="SPOTLIGHT 3" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="8700" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="15" ID="168" Name="SPOTLIGHT 4" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1600" Number="0" Values="0">15</Step>
+        </Function>
+        <Function BoundScene="94" ID="117" Name="LED STATIC RED 1" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="300" Number="0" Values="0">94</Step>
+        </Function>
+        <Function BoundScene="94" ID="123" Name="LED STATIC RED 2" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="400" Number="0" Values="0">94</Step>
+        </Function>
+        <Function BoundScene="94" ID="129" Name="LED STATIC RED 3" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="400" Number="0" Values="0">94</Step>
+        </Function>
+        <Function BoundScene="94" ID="134" Name="LED STATIC RED 4" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="400" Number="0" Values="0">94</Step>
+        </Function>
+        <Function BoundScene="94" ID="139" Name="LED STATIC RED 5" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1600" Number="0" Values="0">94</Step>
+        </Function>
+        <Function BoundScene="94" ID="145" Name="LED STATIC RED 6" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="400" Number="0" Values="0">94</Step>
+        </Function>
+        <Function BoundScene="94" ID="150" Name="LED STATIC RED 7" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1600" Number="0" Values="0">94</Step>
+        </Function>
+        <Function BoundScene="94" ID="157" Name="LED STATIC RED 8" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="400" Number="0" Values="0">94</Step>
+        </Function>
+        <Function BoundScene="94" ID="159" Name="LED STATIC RED 9" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="400" Number="0" Values="0">94</Step>
+        </Function>
+        <Function BoundScene="94" ID="162" Name="LED STATIC RED 10" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1400" Number="0" Values="0">94</Step>
+        </Function>
+        <Function BoundScene="95" ID="119" Name="LED STATIC BLUE 1" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="300" Number="0" Values="0">95</Step>
+        </Function>
+        <Function BoundScene="95" ID="125" Name="LED STATIC BLUE 2" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="400" Number="0" Values="0">95</Step>
+        </Function>
+        <Function BoundScene="95" ID="131" Name="LED STATIC BLUE 3" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="400" Number="0" Values="0">95</Step>
+        </Function>
+        <Function BoundScene="95" ID="136" Name="LED STATIC BLUE 4" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="400" Number="0" Values="0">95</Step>
+        </Function>
+        <Function BoundScene="95" ID="142" Name="LED STATIC BLUE 5" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1300" Number="0" Values="0">95</Step>
+        </Function>
+        <Function BoundScene="95" ID="147" Name="LED STATIC BLUE 6" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="400" Number="0" Values="0">95</Step>
+        </Function>
+        <Function BoundScene="95" ID="152" Name="LED STATIC BLUE 7" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1400" Number="0" Values="0">95</Step>
+        </Function>
+        <Function BoundScene="95" ID="164" Name="LED STATIC BLUE 8" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1600" Number="0" Values="0">95</Step>
+        </Function>
+        <Function ID="121" Name="FULL STAGE WASH 1" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="700" Number="0" Values="0">0</Step>
+        </Function>
+        <Function ID="126" Name="FULL STAGE WASH 2" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="700" Number="0" Values="0">0</Step>
+        </Function>
+        <Function ID="132" Name="FULL STAGE WASH 3" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="700" Number="0" Values="0">0</Step>
+        </Function>
+        <Function ID="137" Name="FULL STAGE WASH 4" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="700" Number="0" Values="0">0</Step>
+        </Function>
+        <Function ID="143" Name="FULL STAGE WASH 5" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1500" Number="0" Values="0">0</Step>
+        </Function>
+        <Function ID="148" Name="FULL STAGE WASH 6" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="600" Number="0" Values="0">0</Step>
+        </Function>
+        <Function ID="154" Name="FULL STAGE WASH 7" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1500" Number="0" Values="0">0</Step>
+        </Function>
+        <Function ID="160" Name="FULL STAGE WASH 8" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="700" Number="0" Values="0">0</Step>
+        </Function>
+        <Function ID="165" Name="FULL STAGE WASH 9" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1100" Number="0" Values="0">0</Step>
+        </Function>
+        <Function ID="167" Name="FULL STAGE WASH 10" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="6900" Number="0" Values="0">0</Step>
+        </Function>
+        <Function ID="169" Name="FULL STAGE WASH 11" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1600" Number="0" Values="0">0</Step>
+        </Function>
+        <Function ID="171" Name="FULL STAGE WASH 12" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="1800" Number="0" Values="0">0</Step>
+        </Function>
+        <Function ID="177" Name="FULL STAGE WASH 13" Path="Whale Montage (Part 1)" Type="Sequence">
+                <Speed Duration="0" FadeIn="0" FadeOut="0"/>
+                <Direction>Forward</Direction>
+                <RunOrder>SingleShot</RunOrder>
+                <SpeedModes Duration="PerStep" FadeIn="Default" FadeOut="Default"/>
+                <Step FadeIn="0" FadeOut="0" Hold="3200" Number="0" Values="0">0</Step>
+        </Function>
+        <!-- END OF AUTO GENERATED XML FROM QLCPYTHONSCRIPTS (DO NOT COPY ROOT ELEMENT BELOW) -->
+</Root>

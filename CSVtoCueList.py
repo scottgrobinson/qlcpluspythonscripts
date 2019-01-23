@@ -116,7 +116,8 @@ def main(qlcfile, cuefile):
         print("ERROR: Unable to open CSV file - Expecting CSV in '%s'" % CSVPATH)
 
     XML_Root = ElementTree.Element("Root")
-    
+    XML_Root.insert(1, ElementTree.Comment(' START OF AUTO GENERATED XML FROM QLCPYTHONSCRIPTS (DO NOT COPY ROOT ELEMENT ABOVE) '))
+
     # Create any required collections
     for collection in COLLECTIONS:
         Collection = ElementTree.SubElement(XML_Root, "Function")
@@ -146,7 +147,9 @@ def main(qlcfile, cuefile):
         STEPCOUNT += 1        
     ShowChaserFunction = qlcsf.createFunction(parent=XML_Root, id=qlcsf.generateFunctionId(), type="Chaser", name="Master Cue List (Auto Generated)", speed=speed, direction="Forward", runorder="Loop", speedmodes=speedmodes, steps=steps)    
 
-    xmlstring = ElementTree.tostring(XML_Root[0], 'utf-8')
+    XML_Root.insert(9999999, ElementTree.Comment(' END OF AUTO GENERATED XML FROM QLCPYTHONSCRIPTS (DO NOT COPY ROOT ELEMENT BELOW) '))
+
+    xmlstring = ElementTree.tostring(XML_Root, 'utf-8')
     qlcsf.outputData(xmlstring, pretty=True, standard=False)
 
 if __name__ == "__main__":
