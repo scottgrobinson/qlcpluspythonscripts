@@ -49,7 +49,10 @@ def main(qlcfile, cuefile, audiopathprefix):
                         track = "Chase " +  str(trackcount)
                         
                         # I.E Loop, SingleShot, PingPong etc
+                        if functionName not in QLCFUNCTIONS[functionType]:
+                             raise Exception("Function '"+functionName+"' not found in functionType. Validate that the functionType is set correctly.")         
                         originalFunctionId = QLCFUNCTIONS[functionType][functionName]['id']
+                        
                         runOrder = QLCFUNCTIONS[functionType][functionName]['runorder']
                         
                         if runOrder == "Loop":
@@ -70,6 +73,8 @@ def main(qlcfile, cuefile, audiopathprefix):
                         functionType = "Scene"
                         track = functionName
                         
+                        if functionName not in QLCFUNCTIONS[functionType]:
+                             raise Exception("Function '"+functionName+"' not found in functionType. Validate that the functionType is set correctly.")         
                         originalFunctionId = QLCFUNCTIONS[functionType][functionName]['id']
 
                         if not duration:
