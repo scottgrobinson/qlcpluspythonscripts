@@ -1,4 +1,4 @@
-# qlcpythonscripts
+# QLC+ Python Scripts
 Python scripts to make QLC a little bit easier!
 
 ### Requirements
