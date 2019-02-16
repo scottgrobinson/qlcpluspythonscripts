@@ -1,5 +1,5 @@
 # QLC+ Python Scripts
-Python scripts to make QLC a little bit easier!
+Python scripts to make QLC+ a little bit easier!
 
 ### Requirements
 * python3 (With following modules)
