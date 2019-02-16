@@ -14,7 +14,7 @@ def main(qlcfile, cuefile):
          qlcsf.init(f.read())
          
     QLCFUNCTIONS = qlcsf.extractFunctions()        
-    FADEDURATION = {'SLOW' : 3000, 'MEDIUM' : 1750, 'QUICK' : 500, 'NONE' : 0}
+    FADEDURATION = {'SLOW' : 2500, 'MEDIUM' : 1250, 'QUICK' : 400, 'NONE' : 0}
 
     CUES = collections.OrderedDict()
     COLLECTIONS = []
@@ -65,10 +65,12 @@ def main(qlcfile, cuefile):
                     def addToCollection(functionType, functionName):
                         COLLECTIONFUNCTIONS.append(QLCFUNCTIONS[functionType][functionName]['id'])                      
                     
-                    def addCue(cueName, fadeIn, functionType, functionId, notes):                        
+                    def addCue(cueName, fadeIn, functionType, functionId, notes):                     
                         data = {}
                         data['id'] = qlcsf.generateFunctionId()
                         data['type'] = functionType
+                        if functionType == "Show":
+                            data['duration'] = qlcsf.extractDurationFromShowID(functionId)
                         data['fadein'] = FADEDURATION[fadeIn]
                         data['fadeout'] = FADEDURATION[fadeOut]
                         data['functionid'] = functionId
@@ -132,13 +134,16 @@ def main(qlcfile, cuefile):
             STEPCOUNT += 1
         
     speed = {"fadein" : 0, "fadeout" : 0, "duration" : 4294967294}
-    speedmodes = {"fadein" : "PerStep", "fadeout" : "PerStep", "duration" : "Common"}
+    speedmodes = {"fadein" : "PerStep", "fadeout" : "PerStep", "duration" : "PerStep"}
     steps = []
     STEPCOUNT = 0
     for key,cue in enumerate(CUES.keys()):
         step = {}
         step['number'] = STEPCOUNT
-        step['hold'] = 0
+        if 'duration' in CUES[cue]:
+            step['hold'] = CUES[cue]['duration'] - CUES[cue]['fadeout']
+        else:
+            step['hold'] = 4294967294
         step['note'] = cue
         step['fadein'] = CUES[cue]['fadein']
         step['fadeout'] = CUES[cue]['fadeout']

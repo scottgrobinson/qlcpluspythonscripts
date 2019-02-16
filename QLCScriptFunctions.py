@@ -32,9 +32,9 @@ def extractFromQLC(query, allowMultipleResults = False):
                 
     return result
 
-def extractDurationFromAudioID(audioPathPrefix, audioId):   
+def extractDurationFromAudioID(audioPathPrefix, audioId):
     audioFunction = extractFromQLC(".//Function[@ID='"+str(audioId)+"']/Source")
-
+    
     if audioFunction is not None:
         # This doesn't appear to be the same duration as QLC, but hopefully it's close enough. We'll see!
         # TODO: Error catching if we can't get the duration
@@ -45,7 +45,18 @@ def extractDurationFromAudioID(audioPathPrefix, audioId):
         raise Exception("Audio function missing source, That doesn't sound right?")
         
     return ""+str(duration)+""
-                
+    
+def extractDurationFromShowID(audioId):
+    showFunction = extractFromQLC(".//Function[@ID='"+str(audioId)+"']/Track[@Name='Audio']/ShowFunction")
+
+    if showFunction is not None:
+        if 'Duration' in showFunction.attrib:
+            return int(showFunction.attrib['Duration'])
+        else:
+            raise Exception("ShowFunction missing duration, That doesn't sound right?")
+    else:
+        raise Exception("Function missing ShowFunction, That doesn't sound right?")
+                    
 def extractFunctions():
     extractedfunctions = extractFromQLC(".//Engine/Function", True)
 
