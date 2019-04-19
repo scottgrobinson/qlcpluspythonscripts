@@ -9,7 +9,7 @@ import QLCScriptFunctions as qlcsf
 @click.option('--cuefile', help='Location of the cue .csv file', required=True)
 @click.option('--audiopathprefix', help='Audio path prefix (QLC path is releative to the .qxw file)', required=True)
 def main(qlcfile, cuefile, audiopathprefix):
-    global QLCFUNCTIONS, CUES
+    global QLCFUNCTIONS
 
     with open(qlcfile) as f:
          qlcsf.init(f.read())
@@ -116,7 +116,7 @@ def main(qlcfile, cuefile, audiopathprefix):
                     
                 line_count += 1            
     except IOError:
-        print("ERROR: Unable to open CSV file - Expecting CSV in '%s'" % CSVPATH)
+        print("ERROR: Unable to open CSV file - Expecting CSV in '%s'" % cuefile)
         
     XML_Root = ElementTree.Element("Root")
     XML_Root.insert(1, ElementTree.Comment(' START OF AUTO GENERATED XML FROM QLCPYTHONSCRIPTS (DO NOT COPY ROOT ELEMENT ABOVE) '))
@@ -131,21 +131,21 @@ def main(qlcfile, cuefile, audiopathprefix):
     XML_TimeDivision.set("BPM", "120")
   
     AudioTrack = qlcsf.createTrack(parent=XML_Function, id=0, name="Audio")
-    AudioTrackFunction = qlcsf.createTrackFunction(parent=AudioTrack, id=AUDIOID, starttime=0, duration=qlcsf.extractDurationFromAudioID(audiopathprefix, AUDIOID), color="#608053")
+    qlcsf.createTrackFunction(parent=AudioTrack, id=AUDIOID, starttime=0, duration=qlcsf.extractDurationFromAudioID(audiopathprefix, AUDIOID), color="#608053")
 
     TRACKCOUNT = 1
     # Make the Chaser tracks
     for chasertrack in TRACKS['Chaser']:
         ChaserTrack = qlcsf.createTrack(parent=XML_Function, id=TRACKCOUNT, name=chasertrack)
         for chaser in TRACKS['Chaser'][chasertrack]:
-            ChaserTrackFunction = qlcsf.createTrackFunction(parent=ChaserTrack, id=chaser['functionid'], starttime=chaser['timecode'], duration=chaser['duration'])
+            qlcsf.createTrackFunction(parent=ChaserTrack, id=chaser['functionid'], starttime=chaser['timecode'], duration=chaser['duration'])
         TRACKCOUNT += 1
         
     # Make the Scene tracks
     for scenetrack in TRACKS['Scene']:
         SceneTrack = qlcsf.createTrack(parent=XML_Function, id=TRACKCOUNT, name=scenetrack, sceneid=QLCFUNCTIONS['Scene'][scenetrack]['id'])
         for scene in TRACKS['Scene'][scenetrack]:
-            SceneTrackFunction = qlcsf.createTrackFunction(parent=SceneTrack, id=scene['functionid'], starttime=scene['timecode'], duration=scene['duration'])
+            qlcsf.createTrackFunction(parent=SceneTrack, id=scene['functionid'], starttime=scene['timecode'], duration=scene['duration'])
         TRACKCOUNT += 1
 
     # Make the Chaser functions
@@ -155,7 +155,7 @@ def main(qlcfile, cuefile, audiopathprefix):
             speed = {"fadein" : 0, "fadeout" : 0, "duration" : newfunction['duration']}
             speedmodes = {"fadein" : "Default", "fadeout" : "Default", "duration" : "Common"}
             steps = [{"number" : 0, "fadein" : 0, "hold" : 0, "fadeout" : 0, "functionid" : newfunction['originalid']}]
-            ChaserFunction = qlcsf.createFunction(parent=XML_Root, id=newfunction['newid'], type="Chaser", name=chaserfunction + " " + str(CHASERFUNCTIONCOUNT), path=showname, speed=speed, direction="Forward", runorder="Loop", speedmodes=speedmodes, steps=steps)    
+            qlcsf.createFunction(parent=XML_Root, id=newfunction['newid'], type="Chaser", name=chaserfunction + " " + str(CHASERFUNCTIONCOUNT), path=showname, speed=speed, direction="Forward", runorder="Loop", speedmodes=speedmodes, steps=steps)    
             CHASERFUNCTIONCOUNT += 1
 
     # Make the Scene functions
@@ -165,7 +165,7 @@ def main(qlcfile, cuefile, audiopathprefix):
             speed = {"fadein" : 0, "fadeout" : 0, "duration" : 0}
             speedmodes = {"fadein" : "Default", "fadeout" : "Default", "duration" : "PerStep"}
             steps = [{"number" : 0, "fadein" : 0, "hold" : newfunction['duration'], "fadeout" : 0, "values" : 0, "functionid" : newfunction['originalid']}]
-            SceneFunction = qlcsf.createFunction(parent=XML_Root, id=newfunction['newid'], type="Sequence", name=scenefunction + " " + str(SCENEFUNCTIONCOUNT), boundscene=newfunction['originalid'], path=showname, speed=speed, direction="Forward", runorder="SingleShot", speedmodes=speedmodes, steps=steps)   
+            qlcsf.createFunction(parent=XML_Root, id=newfunction['newid'], type="Sequence", name=scenefunction + " " + str(SCENEFUNCTIONCOUNT), boundscene=newfunction['originalid'], path=showname, speed=speed, direction="Forward", runorder="SingleShot", speedmodes=speedmodes, steps=steps)   
             SCENEFUNCTIONCOUNT += 1
 
     XML_Root.insert(9999999, ElementTree.Comment(' END OF AUTO GENERATED XML FROM QLCPYTHONSCRIPTS (DO NOT COPY ROOT ELEMENT BELOW) '))
@@ -174,4 +174,4 @@ def main(qlcfile, cuefile, audiopathprefix):
     qlcsf.outputData(xmlstring, pretty=True, standard=False)
 
 if __name__ == "__main__":
-    main()
+    main() # pylint: disable=no-value-for-parameter

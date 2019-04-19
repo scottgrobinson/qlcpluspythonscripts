@@ -99,7 +99,7 @@ def main(qlcfile, cuefile):
                         for i in COLLECTIONS:
                             if COLLECTIONFUNCTIONS == i['functions']:
                                 collectionId = i['id']
-                                break;
+                                break
                                 
                         if not collectionId:
                             collectionId = qlcsf.generateFunctionId()
@@ -150,7 +150,7 @@ def main(qlcfile, cuefile):
         step['functionid'] = CUES[cue]['functionid']
         steps.append(step)   
         STEPCOUNT += 1        
-    ShowChaserFunction = qlcsf.createFunction(parent=XML_Root, id=qlcsf.generateFunctionId(), type="Chaser", name="Master Cue List (Auto Generated)", speed=speed, direction="Forward", runorder="Loop", speedmodes=speedmodes, steps=steps)    
+    qlcsf.createFunction(parent=XML_Root, id=qlcsf.generateFunctionId(), type="Chaser", name="Master Cue List (Auto Generated)", speed=speed, direction="Forward", runorder="Loop", speedmodes=speedmodes, steps=steps)    
 
     XML_Root.insert(9999999, ElementTree.Comment(' END OF AUTO GENERATED XML FROM QLCPYTHONSCRIPTS (DO NOT COPY ROOT ELEMENT BELOW) '))
 
@@ -158,4 +158,4 @@ def main(qlcfile, cuefile):
     qlcsf.outputData(xmlstring, pretty=True, standard=False)
 
 if __name__ == "__main__":
-    main()
+    main() # pylint: disable=no-value-for-parameter
