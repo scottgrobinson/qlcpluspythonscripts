@@ -22,7 +22,13 @@ def main(qlcfile, cuefile, audiopathprefix):
     FUNCTIONS = collections.OrderedDict()
 
     showname = os.path.splitext(os.path.basename(cuefile))[0]
-    AUDIOID = QLCFUNCTIONS['Audio'][showname]['id']
+    if 'Audio' in QLCFUNCTIONS:
+        if showname in QLCFUNCTIONS['Audio']:
+            AUDIOID = QLCFUNCTIONS['Audio'][showname]['id']
+        else:
+            raise Exception("Audio track '"+showname+"' not found - An audio track named '"+showname+"' must be defined") 
+    else:
+        raise Exception("No audio tracks defined in QLC file - An audio track named '"+showname+"' must be defined") 
     
     try:
         with open(cuefile) as csv_file:  
@@ -60,7 +66,7 @@ def main(qlcfile, cuefile, audiopathprefix):
                         
                         # I.E Loop, SingleShot, PingPong etc
                         if functionName not in QLCFUNCTIONS[functionType]:
-                             raise Exception("Function '"+functionName+"' not found in functionType. Validate that the functionType is set correctly.")         
+                             raise Exception("Function '"+functionName+"' not found in functionType. Validate that the functionType is set correctly")         
                         originalFunctionId = QLCFUNCTIONS[functionType][functionName]['id']
                         
                         runOrder = QLCFUNCTIONS[functionType][functionName]['runorder']
@@ -76,7 +82,7 @@ def main(qlcfile, cuefile, audiopathprefix):
                              else:
                                 duration = QLCFUNCTIONS[functionType][functionName]['duration']
                         elif runOrder == "PingPong":
-                             raise Exception("Function '"+functionName+"' at "+timecode+" has a 'Ping Pong' run order. This is not supported. Create a 'Loop' chaser containing this chaser and specify a duration.")
+                             raise Exception("Function '"+functionName+"' at "+timecode+" has a 'Ping Pong' run order. This is not supported. Create a 'Loop' chaser containing this chaser and specify a duration")
                         else:
                              raise Exception("Function '"+functionName+"' at "+timecode+" using an unsupported RunOrder")         
                     elif functionType in ("Scene","SCENE","scene"):
@@ -84,7 +90,7 @@ def main(qlcfile, cuefile, audiopathprefix):
                         track = functionName
                         
                         if functionName not in QLCFUNCTIONS[functionType]:
-                             raise Exception("Function '"+functionName+"' not found in functionType. Validate that the functionType is set correctly.")         
+                             raise Exception("Function '"+functionName+"' not found in functionType. Validate that the functionType is set correctly")         
                         originalFunctionId = QLCFUNCTIONS[functionType][functionName]['id']
 
                         if not duration:
@@ -105,6 +111,8 @@ def main(qlcfile, cuefile, audiopathprefix):
                     data['newid'] = newFunctionId
                     data['originalid'] = originalFunctionId
                     data['duration'] = duration
+                    data['fadein'] = FADEDURATION[fadeIn]
+                    data['fadeout'] = FADEDURATION[fadeOut]
                     FUNCTIONS[functionType][functionName].append(data)
                     # END FUNCTIONS
                     
@@ -120,6 +128,7 @@ def main(qlcfile, cuefile, audiopathprefix):
 
                     if duration:
                         data['duration'] = duration
+
                     data['functionid'] = newFunctionId
                     TRACKS[functionType][track].append(data)
                     # END TRACKS
@@ -163,8 +172,8 @@ def main(qlcfile, cuefile, audiopathprefix):
         CHASERFUNCTIONCOUNT = 1
         for newfunction in FUNCTIONS['Chaser'][chaserfunction]:          
             speed = {"fadein" : 0, "fadeout" : 0, "duration" : newfunction['duration']}
-            speedmodes = {"fadein" : "Default", "fadeout" : "Default", "duration" : "Common"}
-            steps = [{"number" : 0, "fadein" : 0, "hold" : 0, "fadeout" : 0, "functionid" : newfunction['originalid']}]
+            speedmodes = {"fadein" : "PerStep", "fadeout" : "PerStep", "duration" : "Common"}
+            steps = [{"number" : 0, "fadein" : newfunction['fadein'], "hold" : 0, "fadeout" : newfunction['fadeout'], "functionid" : newfunction['originalid']}]
             qlcsf.createFunction(parent=XML_Root, id=newfunction['newid'], type="Chaser", name=chaserfunction + " " + str(CHASERFUNCTIONCOUNT), path=showname, speed=speed, direction="Forward", runorder="Loop", speedmodes=speedmodes, steps=steps)    
             CHASERFUNCTIONCOUNT += 1
 
@@ -173,8 +182,8 @@ def main(qlcfile, cuefile, audiopathprefix):
         SCENEFUNCTIONCOUNT = 1
         for newfunction in FUNCTIONS['Scene'][scenefunction]:
             speed = {"fadein" : 0, "fadeout" : 0, "duration" : 0}
-            speedmodes = {"fadein" : "Default", "fadeout" : "Default", "duration" : "PerStep"}
-            steps = [{"number" : 0, "fadein" : 0, "hold" : newfunction['duration'], "fadeout" : 0, "values" : 0, "functionid" : newfunction['originalid']}]
+            speedmodes = {"fadein" : "PerStep", "fadeout" : "PerStep", "duration" : "Common"}
+            steps = [{"number" : 0, "fadein" : newfunction['fadein'], "hold" : 0, "fadeout" : newfunction['fadeout'], "functionid" : newfunction['originalid']}]
             qlcsf.createFunction(parent=XML_Root, id=newfunction['newid'], type="Sequence", name=scenefunction + " " + str(SCENEFUNCTIONCOUNT), boundscene=newfunction['originalid'], path=showname, speed=speed, direction="Forward", runorder="SingleShot", speedmodes=speedmodes, steps=steps)   
             SCENEFUNCTIONCOUNT += 1
 
