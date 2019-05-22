@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import csv, collections, json, os, click
+import csv, collections, json, os, click, sys
 import xml.etree.ElementTree as ElementTree
 import QLCScriptFunctions as qlcsf
 
@@ -8,14 +8,154 @@ import QLCScriptFunctions as qlcsf
 @click.option('--qlcfile', help='Location of the QLC .qxw file', required=True)
 @click.option('--cuefile', help='Location of the cue .csv file', required=True)
 @click.option('--audiopathprefix', help='Audio path prefix (QLC path is releative to the .qxw file)', required=True)
-def main(qlcfile, cuefile, audiopathprefix):
+@click.option('--auditioncuefileformat', help='Processes the incoming .csv file as if its come from Adobe Audition', is_flag=True)
+def main(qlcfile, cuefile, audiopathprefix, auditioncuefileformat):
     global QLCFUNCTIONS
 
+    def processAuditionRow(description, start, duration, csv_rownum):
+        def reformatTimecode(timecode):
+            m = int(timecode.split(":")[0])
+            s = int(timecode.split(":")[1].split(".")[0])
+            ms = int(timecode.split(":")[1].split(".")[1])
+
+            return "0"+str(m)+":"+format(str(s).zfill(2))+"."+'{:<03d}'.format(ms)
+
+        data = {}
+        # Hooky function to rebuild the duration
+        data['timecode'] = reformatTimecode(start)
+
+        data['functionname'] = description
+        
+        data['fadein'] = 'NONE'
+        for fadetype in FADES:
+            if '{'+fadetype+'}' in description:
+                data['fadein'] = fadetype
+                data['functionname'] = description.replace(' {'+fadetype+'}', '')
+
+        data['fadeout'] = 'NONE'
+        for fadetype in FADES:
+            if '['+fadetype+']' in description:
+                data['fadeout'] = fadetype
+                data['functionname'] = data['functionname'].replace(' ['+fadetype+']', '')
+
+        functionFound = False
+        for functionType in QLCFUNCTIONS:
+            for functionName in QLCFUNCTIONS[functionType]:
+                if data['functionname'] == functionName:
+                    if functionFound:
+                        errors.append("[Line: "+str(csv_rownum)+"] Function '"+functionName+"' is defined in multiple function types. This is not supported")         
+                        return    
+                    data['functiontype'] = functionType.upper()
+                    functionFound = True
+                    break
+
+        if functionFound == False:
+            errors.append("[Line: "+str(csv_rownum)+"] Function '"+data['functionname']+"' not found in any function types")         
+            return 
+
+        # Hooky function to rebuild the duration
+        data['duration'] = reformatTimecode(duration)
+        return data
+
+    def processRowData(data):
+         # We need to create new chases and functions for everything here
+        newFunctionId = qlcsf.generateFunctionId()
+
+        # Means we can name the chase tracks sequentially
+        if data['functiontype'] in ("Chaser","CHASER","chaser"):
+            data['functiontype'] = "Chaser"
+            if data['timecode'] not in TIMECODECHASES:
+                TIMECODECHASES[data['timecode']] = 1
+                trackcount = 1
+            else: 
+                TIMECODECHASES[data['timecode']] += 1
+                trackcount = TIMECODECHASES[data['timecode']]
+            track = "Chase " +  str(trackcount)
+            
+            # I.E Loop, SingleShot, PingPong etc
+            if data['functionname'] not in QLCFUNCTIONS[data['functiontype']]:
+                errors.append("[Line: "+str(csv_rownum)+"] Function '"+data['functionname']+"' not found in Chasers. Validate that the functionType is set correctly")         
+            originalFunctionId = QLCFUNCTIONS[data['functiontype']][data['functionname']]['id']
+            
+            runOrder = QLCFUNCTIONS[data['functiontype']][data['functionname']]['runorder']
+            
+            if runOrder == "Loop":
+                if not data['duration']:
+                    errors.append("[Line: "+str(csv_rownum)+"] Function '"+data['functionname']+"' is missing a duration - 'Loop Chaser' requires a duration")
+                    return
+                else:
+                    duration = qlcsf.timecodeToMS(data['duration'])
+            elif runOrder == "SingleShot":
+                    if data['duration']:
+                        errors.append("[Line: "+str(csv_rownum)+"] Function '"+data['functionname']+"' has a duration - 'Single Shot Chaser' fires only once for a pre-determined duration")
+                        return
+                    else:
+                        duration = QLCFUNCTIONS[data['functiontype']][data['functionname']]['duration']
+            elif runOrder == "PingPong":
+                errors.append("[Line: "+str(csv_rownum)+"] Function '"+data['functionname']+"' has a 'Ping Pong' run order. This is not supported. Create a 'Loop' chaser containing this chaser and specify a duration")
+                return
+            else:
+                errors.append("[Line: "+str(csv_rownum)+"] Function '"+data['functionname']+"' using an unsupported RunOrder")
+                return         
+        elif data['functiontype'] in ("Scene","SCENE","scene"):
+            data['functiontype'] = "Scene"
+            track = data['functionname']
+            
+            if data['functionname'] not in QLCFUNCTIONS[data['functiontype']]:
+                errors.append("[Line: "+str(csv_rownum)+"] Function '"+data['functionname']+"' not found in Scenes. Validate that the functionType is set correctly")
+                return        
+            originalFunctionId = QLCFUNCTIONS[data['functiontype']][data['functionname']]['id']
+
+            if not data['duration']:
+                errors.append("[Line: "+str(csv_rownum)+"] Function '"+data['functionname']+"' is missing a duration - Scenes require a duration")
+                return
+            else:
+                duration = qlcsf.timecodeToMS(data['duration'])
+        else:
+            errors.append("[Line: "+str(csv_rownum)+"] Function '"+data['functiontype']+"' not valid")
+            return
+
+        # FUNCTIONS
+        if data['functiontype'] not in FUNCTIONS:
+            FUNCTIONS[data['functiontype']] = {}
+            
+        if data['functionname'] not in FUNCTIONS[data['functiontype']]:
+            FUNCTIONS[data['functiontype']][data['functionname']] = []
+            
+        functiondata = {}
+        functiondata['newid'] = newFunctionId
+        functiondata['originalid'] = originalFunctionId
+        functiondata['duration'] = duration
+        functiondata['fadein'] = FADES[data['fadein']]
+        functiondata['fadeout'] = FADES[data['fadeout']]
+        FUNCTIONS[data['functiontype']][data['functionname']].append(functiondata)
+        # END FUNCTIONS
+        
+        # TRACKS
+        if data['functiontype'] not in TRACKS:
+            TRACKS[data['functiontype']] = {}
+                    
+        if track not in TRACKS[data['functiontype']]:
+            TRACKS[data['functiontype']][track] = []
+        
+        functiondata = {}
+        functiondata['timecode'] = qlcsf.timecodeToMS(data['timecode'])      
+
+        if duration:
+            functiondata['duration'] = duration
+
+        functiondata['functionid'] = newFunctionId
+        TRACKS[data['functiontype']][track].append(functiondata)
+        # END TRACKS
+
+    if not os.path.isfile(qlcfile):
+        raise Exception("Unable to open QLC file '"+qlcfile+"'")
+    
     with open(qlcfile) as f:
-         qlcsf.init(f.read())
+        qlcsf.init(f.read())
          
     QLCFUNCTIONS = qlcsf.extractFunctions() 
-    FADEDURATION = {'SLOW' : 2500, 'MEDIUM' : 1250, 'QUICK' : 400, 'NONE' : 0}
+    FADES = {'LONG' : 2500, 'SLOW' : 1250, 'MEDIUM' : 850, 'QUICK' : 440, 'RAPID' : 250, 'NONE' : 0}
 
     TIMECODECHASES = {}
     TRACKS = collections.OrderedDict()
@@ -30,113 +170,64 @@ def main(qlcfile, cuefile, audiopathprefix):
     else:
         raise Exception("No audio tracks defined in QLC file - An audio track named '"+showname+"' must be defined") 
     
-    try:
-        with open(cuefile) as csv_file:  
+    SCRIPTPATH = os.path.dirname(os.path.realpath(__file__))
+    CSVPATH = os.path.join(SCRIPTPATH, cuefile)
+
+    if not os.path.isfile(CSVPATH):
+        raise Exception("Unable to open cue file '"+CSVPATH+"'")
+
+    with open(CSVPATH) as csv_file:
+        if auditioncuefileformat:  
+            csv_reader = csv.reader(csv_file, delimiter='\t')
+        else:
             csv_reader = csv.reader(csv_file, delimiter=',')
-            line_count = 0
-            for row in csv_reader:
-                if line_count != 0:
-                    timecode = row[0].strip()
-                    
-                    fadeIn = row[1].strip()
-                    if fadeIn not in ("SLOW","MEDIUM","QUICK","NONE"):
-                        raise Exception("Fade '"+fadeIn+"' not supported. Supported fades 'SLOW,MEDIUM,QUICK,NONE'")
+        line_count = 0
+        csv_rownum = 1
+        errors = []
+        for row in csv_reader:
+            if line_count != 0:
+                csv_rownum += 1
 
-                    fadeOut = row[2].strip()
-                    if fadeOut not in ("SLOW","MEDIUM","QUICK","NONE"):
-                        raise Exception("Fade '"+fadeOut+"' not supported. Supported fades 'SLOW,MEDIUM,QUICK,NONE'")
+                if auditioncuefileformat:  
+                    description = row[0].strip()
+                    start = row[1].strip()
+                    duration = row[2].strip()
 
-                    functionType = row[3].strip()  
-                    functionName = row[4].strip()
-                    duration = row[5].strip()
-                    
-                    # We need to create new chases and functions for everything here
-                    newFunctionId = qlcsf.generateFunctionId()
-                    
-                    # Means we can name the chase tracks sequentially
-                    if functionType in ("Chaser","CHASER","chaser"):
-                        functionType = "Chaser"
-                        if timecode not in TIMECODECHASES:
-                            TIMECODECHASES[timecode] = 1
-                            trackcount = 1
-                        else: 
-                            TIMECODECHASES[timecode] += 1
-                            trackcount = TIMECODECHASES[timecode]
-                        track = "Chase " +  str(trackcount)
-                        
-                        # I.E Loop, SingleShot, PingPong etc
-                        if functionName not in QLCFUNCTIONS[functionType]:
-                             raise Exception("Function '"+functionName+"' not found in functionType. Validate that the functionType is set correctly")         
-                        originalFunctionId = QLCFUNCTIONS[functionType][functionName]['id']
-                        
-                        runOrder = QLCFUNCTIONS[functionType][functionName]['runorder']
-                        
-                        if runOrder == "Loop":
-                            if not duration:
-                                raise Exception("Function '"+functionName+"' at "+timecode+" is missing a duration - 'Loop Chaser' requires a duration")
-                            else:
-                                duration = qlcsf.timecodeToMS(duration)
-                        elif runOrder == "SingleShot":
-                             if duration:
-                                raise Exception("Function '"+functionName+"' at "+timecode+" has a duration - 'Single Shot Chaser' fires only once for a pre-determined duration")
-                             else:
-                                duration = QLCFUNCTIONS[functionType][functionName]['duration']
-                        elif runOrder == "PingPong":
-                             raise Exception("Function '"+functionName+"' at "+timecode+" has a 'Ping Pong' run order. This is not supported. Create a 'Loop' chaser containing this chaser and specify a duration")
-                        else:
-                             raise Exception("Function '"+functionName+"' at "+timecode+" using an unsupported RunOrder")         
-                    elif functionType in ("Scene","SCENE","scene"):
-                        functionType = "Scene"
-                        track = functionName
-                        
-                        if functionName not in QLCFUNCTIONS[functionType]:
-                             raise Exception("Function '"+functionName+"' not found in functionType. Validate that the functionType is set correctly")         
-                        originalFunctionId = QLCFUNCTIONS[functionType][functionName]['id']
-
-                        if not duration:
-                            raise Exception("Function '"+functionName+"' at "+timecode+" is missing a duration - Scenes require a duration")
-                        else:
-                            duration = qlcsf.timecodeToMS(duration)
+                    if len(description.split(" + ")) > 1:
+                        for item in description.split(" + "):
+                            processRowData(processAuditionRow(item, start, duration, csv_rownum))
                     else:
-                        raise Exception("Function '"+functionType+"' not valid")
+                        processRowData(processAuditionRow(item, start, duration, csv_rownum))
+                else:
+                    forProcessing = {}
+                    forProcessing['timecode'] = row[0].strip() 
 
-                    # FUNCTIONS
-                    if functionType not in FUNCTIONS:
-                        FUNCTIONS[functionType] = {}
-                        
-                    if functionName not in FUNCTIONS[functionType]:
-                        FUNCTIONS[functionType][functionName] = []
-                        
-                    data = {}
-                    data['newid'] = newFunctionId
-                    data['originalid'] = originalFunctionId
-                    data['duration'] = duration
-                    data['fadein'] = FADEDURATION[fadeIn]
-                    data['fadeout'] = FADEDURATION[fadeOut]
-                    FUNCTIONS[functionType][functionName].append(data)
-                    # END FUNCTIONS
-                    
-                    # TRACKS
-                    if functionType not in TRACKS:
-                        TRACKS[functionType] = {}
-                                
-                    if track not in TRACKS[functionType]:
-                        TRACKS[functionType][track] = []
-                    
-                    data = {}
-                    data['timecode'] = qlcsf.timecodeToMS(timecode)      
+                    forProcessing['fadein'] = row[1].strip()
+                    if forProcessing['fadein'] not in FADES:
+                        errors.append("[Line: "+str(csv_rownum)+"] Fade '"+fadeIn+"' not supported. Supported fades: "+', '.join(FADES.keys()))
+                        continue
 
-                    if duration:
-                        data['duration'] = duration
+                    forProcessing['fadeout'] = row[2].strip()
+                    if forProcessing['fadeout'] not in FADES:
+                        errors.append("[Line: "+str(csv_rownum)+"] Fade '"+fadeOut+"' not supported. Supported fades: "+', '.join(FADES.keys()))
+                        continue
 
-                    data['functionid'] = newFunctionId
-                    TRACKS[functionType][track].append(data)
-                    # END TRACKS
-                    
-                line_count += 1            
-    except IOError:
-        print("ERROR: Unable to open CSV file - Expecting CSV in '%s'" % cuefile)
-        
+                    forProcessing['functiontype'] = row[3].strip()  
+                    forProcessing['functionname'] = row[4].strip()
+                    forProcessing['duration'] = row[5].strip()
+
+                    processRowData(forProcessing)
+                
+            line_count += 1            
+
+    if errors:
+        for error in errors:
+            print(error)
+        sys.exit(1)
+
+    print(TRACKS)
+    print(FUNCTIONS)
+
     XML_Root = ElementTree.Element("Root")
     XML_Root.insert(1, ElementTree.Comment(' START OF AUTO GENERATED XML FROM QLCPYTHONSCRIPTS (DO NOT COPY ROOT ELEMENT ABOVE) '))
     
@@ -181,7 +272,7 @@ def main(qlcfile, cuefile, audiopathprefix):
     for scenefunction in FUNCTIONS['Scene']:
         SCENEFUNCTIONCOUNT = 1
         for newfunction in FUNCTIONS['Scene'][scenefunction]:
-            speed = {"fadein" : 0, "fadeout" : 0, "duration" : 0}
+            speed = {"fadein" : 0, "fadeout" : 0, "duration" : newfunction['duration']}
             speedmodes = {"fadein" : "PerStep", "fadeout" : "PerStep", "duration" : "Common"}
             steps = [{"number" : 0, "fadein" : newfunction['fadein'], "hold" : 0, "fadeout" : newfunction['fadeout'], "functionid" : newfunction['originalid']}]
             qlcsf.createFunction(parent=XML_Root, id=newfunction['newid'], type="Sequence", name=scenefunction + " " + str(SCENEFUNCTIONCOUNT), boundscene=newfunction['originalid'], path=showname, speed=speed, direction="Forward", runorder="SingleShot", speedmodes=speedmodes, steps=steps)   
