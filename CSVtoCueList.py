@@ -10,112 +10,117 @@ import QLCScriptFunctions as qlcsf
 def main(qlcfile, cuefile):
     global QLCFUNCTIONS, CUES
 
+    if not os.path.isfile(qlcfile):
+        raise Exception("Unable to open QLC file '"+qlcfile+"'")
+
     with open(qlcfile) as f:
          qlcsf.init(f.read())
          
     QLCFUNCTIONS = qlcsf.extractFunctions()        
-    FADEDURATION = {'SLOW' : 2500, 'MEDIUM' : 1250, 'QUICK' : 400, 'NONE' : 0}
+    FADES = {'LONG' : 2500, 'SLOW' : 1250, 'MEDIUM' : 850, 'QUICK' : 440, 'RAPID' : 250, 'NONE' : 0}
 
     CUES = collections.OrderedDict()
     COLLECTIONS = []
-    try:
-        SCRIPTPATH = os.path.dirname(os.path.realpath(__file__))
-        CSVPATH = os.path.join(SCRIPTPATH, cuefile)
-        with open(CSVPATH) as csv_file:  
-            csv_reader = list(csv.reader(csv_file, delimiter=','))
-            
-            line_count = 0
-            for key,row in enumerate(csv_reader):
-                if line_count != 0:
-                    cueName = row[0].strip()
-                    fadeIn = row[1].strip()
 
-                    if fadeIn not in ("SLOW","MEDIUM","QUICK","NONE"):
-                        raise Exception("Fade '"+fadeIn+"' not supported. Supported fades 'SLOW,MEDIUM,QUICK,NONE'")
+    SCRIPTPATH = os.path.dirname(os.path.realpath(__file__))
+    CSVPATH = os.path.join(SCRIPTPATH, cuefile)
 
-                    if key+1 == len(csv_reader):
-                        fadeOut = "SLOW"
+    if not os.path.isfile(CSVPATH):
+        raise Exception("Unable to open cue file '"+CSVPATH+"'")
+
+    with open(CSVPATH) as csv_file:  
+        csv_reader = list(csv.reader(csv_file, delimiter=','))
+        
+        line_count = 0
+        for key,row in enumerate(csv_reader):
+            if line_count != 0:
+                cueName = row[0].strip()
+                fadeIn = row[1].strip()
+
+                if fadeIn not in FADES:
+                    raise Exception("Fade '"+fadeIn+"' not supported. Supported fades: "+', '.join(FADES.keys()))
+
+                if key+1 == len(csv_reader):
+                    fadeOut = "SLOW"
+                else:
+                    fadeOut = csv_reader[key+1][1].strip()
+                
+                function1Type = row[2].strip()
+                function1Name = row[3].strip()
+                function2Type = row[4].strip()
+                function2Name = row[5].strip()
+                function3Type = row[6].strip()
+                function3Name = row[7].strip()
+
+                COLLECTIONFUNCTIONS = []
+                
+                def validateAndUpdateFunction(functionType,functionName): 
+                    if functionType in ("Chaser","CHASER","chaser"):
+                        functionType = "Chaser"
+                    elif functionType in ("Scene","SCENE","scene"):
+                        functionType = "Scene"
+                    elif functionType in ("Show","SHOW","show"):
+                        functionType = "Show"
                     else:
-                        fadeOut = csv_reader[key+1][1].strip()
-                    
-                    function1Type = row[2].strip()
-                    function1Name = row[3].strip()
-                    function2Type = row[4].strip()
-                    function2Name = row[5].strip()
-                    function3Type = row[6].strip()
-                    function3Name = row[7].strip()
-
-                    COLLECTIONFUNCTIONS = []
-                   
-                    def validateAndUpdateFunction(functionType,functionName): 
-                        if functionType in ("Chaser","CHASER","chaser"):
-                            functionType = "Chaser"
-                        elif functionType in ("Scene","SCENE","scene"):
-                            functionType = "Scene"
-                        elif functionType in ("Show","SHOW","show"):
-                            functionType = "Show"
-                        else:
-                            raise Exception("Function '"+functionType+"' not valid")
-                            
-                        if functionName not in QLCFUNCTIONS[functionType]:
-                            raise Exception(cueName+" '"+functionType+" - "+functionName+"' not found in QLC")
+                        raise Exception("Function '"+functionType+"' not valid")
                         
-                        return functionType
-                         
-                    def addToCollection(functionType, functionName):
-                        COLLECTIONFUNCTIONS.append(QLCFUNCTIONS[functionType][functionName]['id'])                      
+                    if functionName not in QLCFUNCTIONS[functionType]:
+                        raise Exception(cueName+" '"+functionType+" - "+functionName+"' not found in QLC")
                     
-                    def addCue(cueName, fadeIn, functionType, functionId, notes):                     
+                    return functionType
+                        
+                def addToCollection(functionType, functionName):
+                    COLLECTIONFUNCTIONS.append(QLCFUNCTIONS[functionType][functionName]['id'])                      
+                
+                def addCue(cueName, fadeIn, functionType, functionId, notes):                     
+                    data = {}
+                    data['id'] = qlcsf.generateFunctionId()
+                    data['type'] = functionType
+                    if functionType == "Show":
+                        data['duration'] = qlcsf.extractDurationFromShowID(functionId)
+                    data['fadein'] = FADES[fadeIn]
+                    data['fadeout'] = FADES[fadeOut]
+                    data['functionid'] = functionId
+                    data['notes'] = notes
+                    CUES[cueName] = data
+                                                            
+                if function1Type:
+                    function1Type = validateAndUpdateFunction(function1Type, function1Name)
+                    addCue(cueName, fadeIn, function1Type, QLCFUNCTIONS[function1Type][function1Name]['id'], function1Name)
+                else:
+                    raise Exception("No actions specified for cue '"+cueName+"'")
+                
+                if function2Type:
+                    function2Type = validateAndUpdateFunction(function2Type, function2Name)
+                    collectionName = function1Name + " / " + function2Name
+                    addToCollection(function1Type, function1Name)
+                    addToCollection(function2Type, function2Name)
+                if function3Type:
+                    function3Type = validateAndUpdateFunction(function3Type, function3Name)
+                    collectionName = function1Name + " / " + function2Name + " / " + function3Name
+                    addToCollection(function3Type, function3Name)
+
+                if COLLECTIONFUNCTIONS:
+                    collectionId = False      
+                    COLLECTIONFUNCTIONS.sort()
+                    for i in COLLECTIONS:
+                        if COLLECTIONFUNCTIONS == i['functions']:
+                            collectionId = i['id']
+                            break
+                            
+                    if not collectionId:
+                        collectionId = qlcsf.generateFunctionId()
                         data = {}
-                        data['id'] = qlcsf.generateFunctionId()
-                        data['type'] = functionType
-                        if functionType == "Show":
-                            data['duration'] = qlcsf.extractDurationFromShowID(functionId)
-                        data['fadein'] = FADEDURATION[fadeIn]
-                        data['fadeout'] = FADEDURATION[fadeOut]
-                        data['functionid'] = functionId
-                        data['notes'] = notes
-                        CUES[cueName] = data
-                                                                
-                    if function1Type:
-                        function1Type = validateAndUpdateFunction(function1Type, function1Name)
-                        addCue(cueName, fadeIn, function1Type, QLCFUNCTIONS[function1Type][function1Name]['id'], function1Name)
-                    else:
-                        raise Exception("No actions specified for cue '"+cueName+"'")
+                        data['id'] = collectionId
+                        data['name'] = collectionName
+                        data['functions'] = COLLECTIONFUNCTIONS                                                    
+                        
+                        COLLECTIONS.append(data) 
                     
-                    if function2Type:
-                        function2Type = validateAndUpdateFunction(function2Type, function2Name)
-                        collectionName = function1Name + " / " + function2Name
-                        addToCollection(function1Type, function1Name)
-                        addToCollection(function2Type, function2Name)
-                    if function3Type:
-                        function3Type = validateAndUpdateFunction(function3Type, function3Name)
-                        collectionName = function1Name + " / " + function2Name + " / " + function3Name
-                        addToCollection(function3Type, function3Name)
+                    addCue(cueName, fadeIn, "Collection", collectionId, collectionName)      
 
-                    if COLLECTIONFUNCTIONS:
-                        collectionId = False      
-                        COLLECTIONFUNCTIONS.sort()
-                        for i in COLLECTIONS:
-                            if COLLECTIONFUNCTIONS == i['functions']:
-                                collectionId = i['id']
-                                break
                                 
-                        if not collectionId:
-                            collectionId = qlcsf.generateFunctionId()
-                            data = {}
-                            data['id'] = collectionId
-                            data['name'] = collectionName
-                            data['functions'] = COLLECTIONFUNCTIONS                                                    
-                         
-                            COLLECTIONS.append(data) 
-                       
-                        addCue(cueName, fadeIn, "Collection", collectionId, collectionName)      
-
-                                   
-                line_count += 1            
-    except IOError:
-        print("ERROR: Unable to open CSV file - Expecting CSV in '%s'" % CSVPATH)
+            line_count += 1            
 
     XML_Root = ElementTree.Element("Root")
     XML_Root.insert(1, ElementTree.Comment(' START OF AUTO GENERATED XML FROM QLCPYTHONSCRIPTS (DO NOT COPY ROOT ELEMENT ABOVE) '))
