@@ -113,15 +113,15 @@ def generateFunctionId():
     
 # I'm sure this is wrong... But it seems to work for what we're doing here!
 def timecodeToMS(timecode):
-    pattern = re.compile("\d\d:\d\d.\d$")
+    pattern = re.compile("\d\d:\d\d.\d\d\d$")
     if pattern.match(timecode):
         tssplit = timecode.split(":")
         smssplit = tssplit[1].split(".")
         minutes = int(tssplit[0]) * 60000
         seconds = int(smssplit[0]) * 1000
-        ms = int(smssplit[1]) * 100
+        ms = int(smssplit[1])
     else:
-        raise Exception("Timecode '"+timecode+"' does not match required pattern - 00:00.0")
+        raise Exception("Timecode '"+timecode+"' does not match required pattern - 00:00.000")
     
     return minutes + seconds + ms
     
