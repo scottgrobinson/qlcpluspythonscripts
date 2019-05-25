@@ -61,6 +61,8 @@ def main(qlcfile, cuefile):
                         functionType = "Scene"
                     elif functionType in ("Show","SHOW","show"):
                         functionType = "Show"
+                    elif functionType in ("Audio","AUDIO","audio"):
+                        functionType = "Audio"
                     else:
                         raise Exception("Function '"+functionType+"' not valid")
                         
@@ -113,13 +115,12 @@ def main(qlcfile, cuefile):
                         data = {}
                         data['id'] = collectionId
                         data['name'] = collectionName
-                        data['functions'] = COLLECTIONFUNCTIONS                                                    
+                        data['functions'] = COLLECTIONFUNCTIONS
                         
                         COLLECTIONS.append(data) 
                     
                     addCue(cueName, fadeIn, "Collection", collectionId, collectionName)      
-
-                                
+             
             line_count += 1            
 
     XML_Root = ElementTree.Element("Root")
