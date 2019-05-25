@@ -7,18 +7,25 @@ import QLCScriptFunctions as qlcsf
 @click.command()
 @click.option('--qlcfile', help='Location of the QLC .qxw file', required=True)
 @click.option('--cuefile', help='Location of the cue .csv file', required=True)
-@click.option('--audiopathprefix', help='Audio path prefix (QLC path is releative to the .qxw file)', required=True)
 @click.option('--auditioncuefileformat', help='Processes the incoming .csv file as if its come from Adobe Audition', is_flag=True)
-def main(qlcfile, cuefile, audiopathprefix, auditioncuefileformat):
+def main(qlcfile, cuefile, auditioncuefileformat):
     global QLCFUNCTIONS
 
     def processAuditionRow(description, start, duration, csv_rownum):
         def reformatTimecode(timecode):
             m = int(timecode.split(":")[0])
             s = int(timecode.split(":")[1].split(".")[0])
-            ms = int(timecode.split(":")[1].split(".")[1])
+            ms = timecode.split(":")[1].split(".")[1]
 
-            return "0"+str(m)+":"+format(str(s).zfill(2))+"."+'{:<03d}'.format(ms)
+            # Make this better. I'm in a rush and it's BAD.
+            if len(ms) == 3:
+                ms = ms
+            elif len(ms) == 2:
+                ms = ms + "0"
+            elif len(ms) == 1:
+                ms = ms + "00"
+
+            return "0"+str(m)+":"+format(str(s).zfill(2))+"."+ms
 
         data = {}
         # Hooky function to rebuild the duration
@@ -55,7 +62,13 @@ def main(qlcfile, cuefile, audiopathprefix, auditioncuefileformat):
 
         # Hooky function to rebuild the duration
         data['duration'] = reformatTimecode(duration)
-        return data
+        if data['duration'] == "00:00.000":
+            errors.append("[Line: "+str(csv_rownum)+"] Function '"+data['functionname']+"' has a duration of 0:00.000")         
+
+        if errors:
+            return False
+        else:
+            return data
 
     def processRowData(data):
          # We need to create new chases and functions for everything here
@@ -195,9 +208,13 @@ def main(qlcfile, cuefile, audiopathprefix, auditioncuefileformat):
 
                     if len(description.split(" + ")) > 1:
                         for item in description.split(" + "):
-                            processRowData(processAuditionRow(item, start, duration, csv_rownum))
+                            auditionRowData = processAuditionRow(item, start, duration, csv_rownum)
+                            if auditionRowData not in (False, None):
+                                processRowData(auditionRowData)
                     else:
-                        processRowData(processAuditionRow(item, start, duration, csv_rownum))
+                        auditionRowData = processAuditionRow(description, start, duration, csv_rownum)
+                        if auditionRowData not in (False, None):
+                            processRowData(auditionRowData)
                 else:
                     forProcessing = {}
                     forProcessing['timecode'] = row[0].strip() 
@@ -225,9 +242,6 @@ def main(qlcfile, cuefile, audiopathprefix, auditioncuefileformat):
             print(error)
         sys.exit(1)
 
-    print(TRACKS)
-    print(FUNCTIONS)
-
     XML_Root = ElementTree.Element("Root")
     XML_Root.insert(1, ElementTree.Comment(' START OF AUTO GENERATED XML FROM QLCPYTHONSCRIPTS (DO NOT COPY ROOT ELEMENT ABOVE) '))
     
@@ -241,42 +255,46 @@ def main(qlcfile, cuefile, audiopathprefix, auditioncuefileformat):
     XML_TimeDivision.set("BPM", "120")
   
     AudioTrack = qlcsf.createTrack(parent=XML_Function, id=0, name="Audio")
-    qlcsf.createTrackFunction(parent=AudioTrack, id=AUDIOID, starttime=0, duration=qlcsf.extractDurationFromAudioID(audiopathprefix, AUDIOID), color="#608053")
+    qlcsf.createTrackFunction(parent=AudioTrack, id=AUDIOID, starttime=0, duration=qlcsf.extractDurationFromAudioID(os.path.dirname(qlcfile), AUDIOID), color="#608053")
 
     TRACKCOUNT = 1
     # Make the Chaser tracks
-    for chasertrack in TRACKS['Chaser']:
-        ChaserTrack = qlcsf.createTrack(parent=XML_Function, id=TRACKCOUNT, name=chasertrack)
-        for chaser in TRACKS['Chaser'][chasertrack]:
-            qlcsf.createTrackFunction(parent=ChaserTrack, id=chaser['functionid'], starttime=chaser['timecode'], duration=chaser['duration'])
-        TRACKCOUNT += 1
+    if 'Chaser' in TRACKS:
+        for chasertrack in TRACKS['Chaser']:
+            ChaserTrack = qlcsf.createTrack(parent=XML_Function, id=TRACKCOUNT, name=chasertrack)
+            for chaser in TRACKS['Chaser'][chasertrack]:
+                qlcsf.createTrackFunction(parent=ChaserTrack, id=chaser['functionid'], starttime=chaser['timecode'], duration=chaser['duration'])
+            TRACKCOUNT += 1
         
     # Make the Scene tracks
-    for scenetrack in TRACKS['Scene']:
-        SceneTrack = qlcsf.createTrack(parent=XML_Function, id=TRACKCOUNT, name=scenetrack, sceneid=QLCFUNCTIONS['Scene'][scenetrack]['id'])
-        for scene in TRACKS['Scene'][scenetrack]:
-            qlcsf.createTrackFunction(parent=SceneTrack, id=scene['functionid'], starttime=scene['timecode'], duration=scene['duration'])
-        TRACKCOUNT += 1
+    if 'Scene' in TRACKS:
+        for scenetrack in TRACKS['Scene']:
+            SceneTrack = qlcsf.createTrack(parent=XML_Function, id=TRACKCOUNT, name=scenetrack, sceneid=QLCFUNCTIONS['Scene'][scenetrack]['id'])
+            for scene in TRACKS['Scene'][scenetrack]:
+                qlcsf.createTrackFunction(parent=SceneTrack, id=scene['functionid'], starttime=scene['timecode'], duration=scene['duration'])
+            TRACKCOUNT += 1
 
     # Make the Chaser functions
-    for chaserfunction in FUNCTIONS['Chaser']:
-        CHASERFUNCTIONCOUNT = 1
-        for newfunction in FUNCTIONS['Chaser'][chaserfunction]:          
-            speed = {"fadein" : 0, "fadeout" : 0, "duration" : newfunction['duration']}
-            speedmodes = {"fadein" : "PerStep", "fadeout" : "PerStep", "duration" : "Common"}
-            steps = [{"number" : 0, "fadein" : newfunction['fadein'], "hold" : 0, "fadeout" : newfunction['fadeout'], "functionid" : newfunction['originalid']}]
-            qlcsf.createFunction(parent=XML_Root, id=newfunction['newid'], type="Chaser", name=chaserfunction + " " + str(CHASERFUNCTIONCOUNT), path=showname, speed=speed, direction="Forward", runorder="Loop", speedmodes=speedmodes, steps=steps)    
-            CHASERFUNCTIONCOUNT += 1
+    if 'Chaser' in FUNCTIONS:
+        for chaserfunction in FUNCTIONS['Chaser']:
+            CHASERFUNCTIONCOUNT = 1
+            for newfunction in FUNCTIONS['Chaser'][chaserfunction]:          
+                speed = {"fadein" : 0, "fadeout" : 0, "duration" : newfunction['duration']}
+                speedmodes = {"fadein" : "PerStep", "fadeout" : "PerStep", "duration" : "Common"}
+                steps = [{"number" : 0, "fadein" : newfunction['fadein'], "hold" : 0, "fadeout" : newfunction['fadeout'], "functionid" : newfunction['originalid']}]
+                qlcsf.createFunction(parent=XML_Root, id=newfunction['newid'], type="Chaser", name=chaserfunction + " " + str(CHASERFUNCTIONCOUNT), path=showname, speed=speed, direction="Forward", runorder="Loop", speedmodes=speedmodes, steps=steps)    
+                CHASERFUNCTIONCOUNT += 1
 
     # Make the Scene functions
-    for scenefunction in FUNCTIONS['Scene']:
-        SCENEFUNCTIONCOUNT = 1
-        for newfunction in FUNCTIONS['Scene'][scenefunction]:
-            speed = {"fadein" : 0, "fadeout" : 0, "duration" : newfunction['duration']}
-            speedmodes = {"fadein" : "PerStep", "fadeout" : "PerStep", "duration" : "Common"}
-            steps = [{"number" : 0, "fadein" : newfunction['fadein'], "hold" : 0, "fadeout" : newfunction['fadeout'], "functionid" : newfunction['originalid']}]
-            qlcsf.createFunction(parent=XML_Root, id=newfunction['newid'], type="Sequence", name=scenefunction + " " + str(SCENEFUNCTIONCOUNT), boundscene=newfunction['originalid'], path=showname, speed=speed, direction="Forward", runorder="SingleShot", speedmodes=speedmodes, steps=steps)   
-            SCENEFUNCTIONCOUNT += 1
+    if 'Scene' in FUNCTIONS:
+        for scenefunction in FUNCTIONS['Scene']:
+            SCENEFUNCTIONCOUNT = 1
+            for newfunction in FUNCTIONS['Scene'][scenefunction]:
+                speed = {"fadein" : 0, "fadeout" : 0, "duration" : newfunction['duration']}
+                speedmodes = {"fadein" : "PerStep", "fadeout" : "PerStep", "duration" : "Common"}
+                steps = [{"number" : 0, "fadein" : newfunction['fadein'], "hold" : 0, "fadeout" : newfunction['fadeout'], "functionid" : newfunction['originalid']}]
+                qlcsf.createFunction(parent=XML_Root, id=newfunction['newid'], type="Sequence", name=scenefunction + " " + str(SCENEFUNCTIONCOUNT), boundscene=newfunction['originalid'], path=showname, speed=speed, direction="Forward", runorder="SingleShot", speedmodes=speedmodes, steps=steps)   
+                SCENEFUNCTIONCOUNT += 1
 
     XML_Root.insert(9999999, ElementTree.Comment(' END OF AUTO GENERATED XML FROM QLCPYTHONSCRIPTS (DO NOT COPY ROOT ELEMENT BELOW) '))
         
