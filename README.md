@@ -18,3 +18,7 @@ Takes a CSV of functions (Chasers, Scenes, Shows) and generates a cue list to ru
 
 ## CSVtoShow.py
 Takes a CSV of timecode and functions, and generates a show
+
+### To-do
+* Tidy up error checking, and detect if multiple functions share the same name
+* Just... Tidy it up! It works nicely now, but we can tidy allot of this up
